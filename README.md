@@ -1,54 +1,70 @@
-TIWANA-WEBSITE
-Empowering Connections, Inspiring Innovation, Elevating Presence
+# Aithentic Product Showcase
 
-last-commit repo-top-language repo-language-count
-Built with the tools and technologies:
+Aithentic is a modern product storytelling website that blends immersive hero experiences, conversion-focused service modules, dynamic news popups, and a backend-ready contact workflow. The site demonstrates how marketing, design, and engineering collaborate to launch high-performing digital experiences quickly.
 
-Markdown
+## Highlights
 
-Table of Contents
-Overview
-Getting Started
-Prerequisites
-Installation
-Usage
-Testing
-Overview
-tiwana-website is a foundational web template designed to help developers quickly set up a responsive and interactive personal or professional website. It provides a clean, structured index.html that orchestrates stylesheets, scripts, and UI components to deliver a cohesive user experience.
+- ?? **Centered hero narrative** with animated call-to-actions tailored for rapid product launches
+- ?? **Updated content architecture** for the Aithentic brand across About, Platform Highlights, and Experience Library sections
+- ?? **Interactive modals** that reveal deeper insights for platform services, recent articles, and footer service offerings
+- ?? **Backend-powered contact form** that validates input and stores submissions to a text file for easy follow-up
+- ? **Refreshed visual language** featuring gradient-driven imagery, hover animations, and accessible focus states
 
-Why tiwana-website?
+## Getting Started
 
-This project simplifies the process of creating a polished web presence by providing a robust main entry point. The core features include:
+### Prerequisites
 
-🧩 🎨 Layout & Responsiveness: Establishes a flexible, visually appealing structure adaptable to various devices.
-🚀 ⚙️ Script & Style Integration: Seamlessly includes essential assets for interactivity and design consistency.
-🧭 Navigation Framework: Defines intuitive navigation for smooth user journeys.
-🖼️ Asset Cohesion: Integrates UI components and assets for a unified presentation.
-🔧 Extensibility: Easily customizable to fit specific branding or content needs.
-Getting Started
-Prerequisites
-This project requires the following dependencies:
+- [Node.js](https://nodejs.org/) v16 or newer
+- npm (ships with Node.js)
 
-Programming Language: HTML
-Installation
-Build tiwana-website from the source and install dependencies:
+### Installation
 
-Clone the repository:
+```bash
+git clone https://github.com/Amitkumar0111/tiwana-website
+cd tiwana-website
+npm install
+```
 
-❯ git clone https://github.com/Amitkumar0111/tiwana-website
-Navigate to the project directory:
+### Running the project
 
-❯ cd tiwana-website
-Install the dependencies:
+Serve the static site and API locally (default: <http://localhost:3000>):
 
-echo 'INSERT-INSTALL-COMMAND-HERE'
+```bash
+npm start
+```
 
-Usage
-Run the project with:
+For live-reload during development:
 
-echo 'INSERT-RUN-COMMAND-HERE'
+```bash
+npm run dev
+```
 
-Testing
-Tiwana-website uses the {test_framework} test framework. Run the test suite with:
+### Contact submissions
 
-echo 'INSERT-TEST-COMMAND-HERE'
+- Form data is validated in the browser and sent to `POST /api/contact`
+- Submissions are appended to `data/contact-submissions.txt`
+- The server automatically creates the `data` directory if it does not exist
+
+## Project Structure
+
+```
+??? assets/
+?   ??? css/         ? Global styles
+?   ??? images/      ? Brand imagery & hero assets
+?   ??? js/          ? Frontend interactions (modals, counters, contact form)
+??? data/            ? Generated at runtime for contact submissions
+??? index.html       ? Marketing site markup
+??? package.json     ? Node.js configuration
+??? server.js        ? Express server handling static hosting + contact API
+```
+
+## Scripts
+
+| Command | Description |
+| --- | --- |
+| `npm start` | Run the production server |
+| `npm run dev` | Run the server with live reload via nodemon |
+
+## License
+
+This project remains open for customization for Aithentic client engagements. Adapt the content, imagery, or backend integration as needed for your launch.
