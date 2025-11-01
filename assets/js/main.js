@@ -2,63 +2,69 @@ const numberFormatter = new Intl.NumberFormat('en-IN');
 
 const serviceDetails = {
     'body-repair': {
-        title: 'Body Repair Excellence',
+        title: 'Custom Web Development',
         image: './assets/images/services-1.jpeg',
-        description: 'Dealer-grade collision restoration for aluminium and high-strength steel frames.',
+        description: 'Tailored web solutions built with modern technologies and best practices.',
         points: [
-            'Computerised chassis straightening and panel calibrations for BMW, Mercedes, Audi, and more.',
-            'OEM-approved paint booths with dust-free curing for flawless colour matching.',
-            'Dedicated insurance desk for hassle-free approvals and claim paperwork.'
+            'Responsive websites optimized for all devices and screen sizes.',
+            'Built with React, Vue, Angular, or your preferred framework.',
+            'SEO-friendly architecture for better search engine rankings.',
+            'Fast loading times with performance optimization built-in.'
         ]
     },
     'maintenance': {
-        title: 'Scheduled Maintenance',
+        title: 'E-commerce Solutions',
         image: './assets/images/services-3.jpeg',
-        description: 'Preventive care programs tuned around European service schedules.',
+        description: 'Complete online stores that drive sales and enhance customer experience.',
         points: [
-            'Digital health reports covering 120+ checkpoints on every visit.',
-            'Genuine fluids, filters, and torque specs as per factory recommendations.',
-            'Predictive reminders sent via WhatsApp so you never miss a service.'
+            'Secure payment gateway integration (Stripe, PayPal, Razorpay).',
+            'Inventory management and order tracking systems.',
+            'Shopping cart optimization for higher conversion rates.',
+            'Mobile-first design for on-the-go shopping experience.'
         ]
     },
     'overhaul': {
-        title: 'Major Assembly Overhauls',
+        title: 'Web Applications',
         image: './assets/images/services-4.jpg',
-        description: 'Rebuilds and retrofits that extend the life of your powertrain components.',
+        description: 'Powerful web applications engineered for performance and scalability.',
         points: [
-            'Engine remanufacturing with OEM tolerances and warranty-backed parts.',
-            'Transmission rebuilds, programming, and mechatronic flush procedures.',
-            'Adaptive suspension diagnostics with laser alignment and calibration.'
+            'Full-stack development with Node.js, Python, or PHP backends.',
+            'RESTful API design and implementation.',
+            'Database architecture and optimization (MySQL, MongoDB, PostgreSQL).',
+            'Cloud deployment on AWS, Azure, or Google Cloud Platform.'
         ]
     },
     'paint': {
-        title: 'Paint Studio & Detailing',
+        title: 'UI/UX Design',
         image: './assets/images/services-5.jpg',
-        description: 'Showroom-grade finishes with premium protection packages.',
+        description: 'Beautiful interfaces that prioritize user experience and engagement.',
         points: [
-            'Infrared curing booths ensure consistent gloss and depth on every panel.',
-            'Ceramic and graphene coatings with maintenance support up to five years.',
-            'Spectrophotometer-based colour matching for factory-perfect results.'
+            'User research and persona development.',
+            'Wireframing and interactive prototypes using Figma.',
+            'Accessibility-first design principles (WCAG compliant).',
+            'Usability testing and iterative improvements.'
         ]
     },
     'detailing': {
-        title: 'Detailing Lounge',
+        title: 'Digital Marketing',
         image: './assets/images/services-6.jpeg',
-        description: 'Interior and exterior rejuvenation created for luxury cabins.',
+        description: 'Strategic digital marketing to grow your online presence and revenue.',
         points: [
-            'Ozone sanitisation, leather hydration, and allergen neutralisation.',
-            'Steam cleaning with swirl-free polishing for long-lasting shine.',
-            'Alloy, brake caliper, and glass restoration to complement the finish.'
+            'Search Engine Optimization (SEO) for organic traffic growth.',
+            'Social media management and content creation.',
+            'Google Ads and Facebook Ads campaign management.',
+            'Email marketing automation and analytics reporting.'
         ]
     },
     'enhancements': {
-        title: 'Custom Enhancements',
+        title: 'API & Backend Services',
         image: './assets/images/services-8.jpeg',
-        description: 'Tailor-made upgrades that elevate performance and personality.',
+        description: 'Robust backend systems and integrations that power your applications.',
         points: [
-            'Stage 1 & 2 ECU remaps supplied with dyno health reports.',
-            'Premium wraps, PPF installs, and bespoke graphic packages.',
-            'Lifestyle upgrades including ambient lighting, infotainment, and dash cams.'
+            'Custom API development and third-party integrations.',
+            'Microservices architecture for scalable solutions.',
+            'Real-time features with WebSocket and Socket.io.',
+            'DevOps and CI/CD pipeline setup for automated deployments.'
         ]
     }
 };
@@ -134,6 +140,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initialiseSmoothScroll();
     initThirdPartyLibraries();
     setupServiceModal();
+    setupBlogModal();
+    setupOtherServicesModal();
     setupCounters();
     setupContactForm();
     setupBlogModal();
@@ -303,6 +311,156 @@ function setupServiceModal() {
     });
 }
 
+function setupBlogModal() {
+    const modal = document.getElementById('blogModal');
+    if (!modal) {
+        return;
+    }
+
+    const modalTitle = modal.querySelector('[data-blog-title]');
+    const modalCategory = modal.querySelector('[data-blog-category]');
+    const modalContent = modal.querySelector('[data-blog-content]');
+    const modalImage = modal.querySelector('[data-blog-image]');
+    const closeButtons = modal.querySelectorAll('[data-blog-modal-close]');
+    let lastFocusedElement = null;
+
+    modal.setAttribute('aria-hidden', 'true');
+
+    const renderBlogModal = (blog) => {
+        modalTitle.textContent = blog.title;
+        modalCategory.textContent = blog.category;
+        modalContent.innerHTML = blog.content;
+        modalImage.src = blog.image;
+        modalImage.alt = blog.title;
+    };
+
+    const openBlogModal = (key) => {
+        const blog = blogDetails[key];
+        if (!blog) {
+            return;
+        }
+
+        renderBlogModal(blog);
+        lastFocusedElement = document.activeElement;
+        modal.classList.add('is-visible');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('no-scroll');
+
+        const closeButton = modal.querySelector('.blog-modal__close');
+        window.requestAnimationFrame(() => {
+            closeButton?.focus({ preventScroll: true });
+        });
+    };
+
+    const closeBlogModal = () => {
+        modal.classList.remove('is-visible');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('no-scroll');
+        if (lastFocusedElement instanceof HTMLElement) {
+            lastFocusedElement.focus({ preventScroll: true });
+        }
+    };
+
+    document.querySelectorAll('[data-blog-key]').forEach((card) => {
+        card.addEventListener('click', () => {
+            openBlogModal(card.dataset.blogKey);
+        });
+    });
+
+    closeButtons.forEach((button) => {
+        button.addEventListener('click', closeBlogModal);
+    });
+
+    modal.addEventListener('click', (event) => {
+        if (event.target?.dataset?.blogModalClose !== undefined) {
+            closeBlogModal();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modal.classList.contains('is-visible')) {
+            closeBlogModal();
+        }
+    });
+}
+
+function setupOtherServicesModal() {
+    const modal = document.getElementById('otherServiceModal');
+    if (!modal) {
+        return;
+    }
+
+    const modalTitle = modal.querySelector('[data-other-modal-title]');
+    const modalDescription = modal.querySelector('[data-other-modal-description]');
+    const modalList = modal.querySelector('[data-other-modal-list]');
+    const closeButtons = modal.querySelectorAll('[data-other-modal-close]');
+    let lastFocusedElement = null;
+
+    modal.setAttribute('aria-hidden', 'true');
+
+    const renderModal = (service) => {
+        modalTitle.textContent = service.title;
+        modalDescription.textContent = service.description;
+
+        modalList.innerHTML = '';
+        service.points.forEach((point) => {
+            const item = document.createElement('li');
+            item.textContent = point;
+            modalList.appendChild(item);
+        });
+    };
+
+    const openModal = (key) => {
+        const service = otherServicesDetails[key];
+        if (!service) {
+            return;
+        }
+
+        renderModal(service);
+        lastFocusedElement = document.activeElement;
+        modal.classList.add('is-visible');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('no-scroll');
+
+        const closeButton = modal.querySelector('.service-modal__close');
+        window.requestAnimationFrame(() => {
+            closeButton?.focus({ preventScroll: true });
+        });
+    };
+
+    const closeModal = () => {
+        modal.classList.remove('is-visible');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('no-scroll');
+        if (lastFocusedElement instanceof HTMLElement) {
+            lastFocusedElement.focus({ preventScroll: true });
+        }
+    };
+
+    document.querySelectorAll('[data-other-service]').forEach((link) => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            openModal(link.dataset.otherService);
+        });
+    });
+
+    closeButtons.forEach((button) => {
+        button.addEventListener('click', closeModal);
+    });
+
+    modal.addEventListener('click', (event) => {
+        if (event.target?.dataset?.otherModalClose !== undefined) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modal.classList.contains('is-visible')) {
+            closeModal();
+        }
+    });
+}
+
 function setupCounters() {
     const counterCards = document.querySelectorAll('.counter-card');
     if (!counterCards.length) {
@@ -405,6 +563,9 @@ function setupContactForm() {
         }
 
         const submissionText = buildSubmissionText(data);
+        
+        // Auto-save submission to backend (text file)
+        saveToBackend(submissionText);
 
         // Save to backend
         saveToBackend(submissionText).then(() => {
@@ -432,7 +593,7 @@ function buildSubmissionText(data) {
     });
 
     return [
-        '--- Tiwana Automobiles contact submission ---',
+        '--- Aithentic Contact Submission ---',
         `Timestamp: ${timestamp}`,
         `Name: ${data.firstName} ${data.lastName}`,
         `Email: ${data.email}`,
@@ -445,6 +606,9 @@ function buildSubmissionText(data) {
     ].join('\n');
 }
 
+function saveToBackend(content) {
+    // Auto-save to backend
+    const timestamp = Date.now();
 async function saveToBackend(content) {
     try {
         const response = await fetch('/api/save-contact.php', {
@@ -484,12 +648,17 @@ function downloadTextFile(filename, content) {
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = filename;
-
+    link.download = `contact-submission-${timestamp}.txt`;
+    
+    // Silently download in background
+    link.style.display = 'none';
     document.body.appendChild(link);
     link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
+    
+    setTimeout(() => {
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+    }, 100);
 }
 
 function showAlert(options) {
