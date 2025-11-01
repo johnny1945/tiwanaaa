@@ -69,131 +69,70 @@ const serviceDetails = {
     }
 };
 
-const otherServicesDetails = {
-    'glass': {
-        title: 'React & Next.js Development',
-        description: 'Modern JavaScript frameworks for building fast, scalable web applications.',
-        points: [
-            'Server-side rendering for optimal SEO performance',
-            'Static site generation for lightning-fast load times',
-            'React Server Components for efficient data fetching',
-            'Incremental static regeneration for dynamic content'
-        ]
+const blogDetails = {
+    'blog-1': {
+        title: 'Inside Our Design Process',
+        category: 'Design',
+        image: './assets/images/blog-post-1.jpeg',
+        description: 'Take a behind-the-scenes look at how we create authentic, user-centered designs that showcase your products beautifully.',
+        content: '<p>Our design process represents the pinnacle of web design excellence. Every website we create undergoes rigorous planning and design procedures to ensure optimal user experience and visual appeal.</p><p>We utilize modern design tools and follow industry best practices, ensuring that every design meets or exceeds client expectations and industry standards.</p>'
     },
-    'upholstery': {
-        title: 'Vue & Nuxt.js Development',
-        description: 'Progressive JavaScript framework for intuitive user interfaces.',
-        points: [
-            'Component-based architecture for reusable code',
-            'Universal rendering for better performance',
-            'Built-in state management with Pinia',
-            'Automatic code splitting for faster page loads'
-        ]
+    'blog-2': {
+        title: 'Best Practices for Product Showcase Websites',
+        category: 'Tips',
+        image: './assets/images/blog-post-2.jpeg',
+        description: 'From responsive layouts to compelling visuals, learn how to create websites that effectively showcase your products and drive conversions.',
+        content: '<p>Discover the secrets behind creating effective product showcase websites. Learn how to present your products in ways that captivate visitors and encourage them to take action.</p><p>From high-quality imagery to clear call-to-actions, we explore comprehensive strategies that help your products stand out online.</p>'
     },
-    'antirust': {
-        title: 'Node.js & Express Backend',
-        description: 'Scalable server-side applications with JavaScript runtime.',
-        points: [
-            'RESTful API development with Express framework',
-            'Real-time capabilities with Socket.io',
-            'Efficient asynchronous programming',
-            'Microservices architecture support'
-        ]
-    },
-    'steering': {
-        title: 'Python & Django Development',
-        description: 'Powerful backend framework for rapid development.',
-        points: [
-            'Django REST framework for API development',
-            'Built-in admin panel for content management',
-            'ORM for database abstraction',
-            'Strong security features out of the box'
-        ]
-    },
-    'matts': {
-        title: 'WordPress & PHP Solutions',
-        description: 'Content management systems for easy website management.',
-        points: [
-            'Custom theme development from scratch',
-            'Plugin development for extended functionality',
-            'WooCommerce integration for e-commerce',
-            'Headless WordPress with modern frontends'
-        ]
-    },
-    'lights': {
-        title: 'MongoDB & PostgreSQL',
-        description: 'Database solutions for storing and managing your data.',
-        points: [
-            'NoSQL flexibility with MongoDB for unstructured data',
-            'PostgreSQL for complex relational data',
-            'Database design and optimization',
-            'Backup and disaster recovery strategies'
-        ]
-    },
-    'washing': {
-        title: 'AWS & Azure Cloud',
-        description: 'Cloud infrastructure for scalable and reliable hosting.',
-        points: [
-            'EC2, S3, and Lambda for AWS deployments',
-            'Azure App Service and Functions',
-            'Auto-scaling and load balancing',
-            'CDN integration for global performance'
-        ]
-    },
-    'headliners': {
-        title: 'Docker & Kubernetes',
-        description: 'Containerization and orchestration for modern deployments.',
-        points: [
-            'Docker containerization for consistent environments',
-            'Kubernetes orchestration for production workloads',
-            'CI/CD pipeline setup with GitHub Actions',
-            'Infrastructure as code with Terraform'
-        ]
+    'blog-3': {
+        title: 'The Future of Web Design',
+        category: 'Insights',
+        image: './assets/images/blog-post-3 (2).jpeg',
+        description: 'We\'re investing in emerging technologies and design trends to future-proof your digital presence.',
+        content: '<p>As web design continues to evolve, we\'re preparing for the future. Our investment in new technologies and design trends ensures we can create websites that stand the test of time.</p><p>Our team stays updated with the latest design tools, frameworks, and methodologies to deliver cutting-edge solutions that keep your website ahead of the curve.</p>'
     }
 };
 
-const blogDetails = {
-    'blog1': {
-        title: 'Modern Web Development Trends in 2024',
-        category: 'Development',
-        image: './assets/images/blog-post-1.jpeg',
-        content: `
-            <p>The web development landscape is evolving rapidly, with new frameworks, tools, and best practices emerging constantly. At Aithentic, we stay ahead of the curve to deliver cutting-edge solutions to our clients.</p>
-            
-            <p>We've invested heavily in mastering the latest technologies including React Server Components, Next.js 14, and the new AI-powered development tools that are revolutionizing how we build web applications.</p>
-            
-            <p>Our developers are trained in modern architectural patterns like JAMstack, microservices, and serverless computing. We understand that different projects require different approaches, and we're equipped to recommend and implement the best solution for your specific needs.</p>
-            
-            <p>From progressive web apps to headless CMS implementations, our comprehensive approach ensures that your digital presence is built on a solid, future-proof foundation that scales with your business growth.</p>
-        `
+const otherServicesDetails = {
+    'windshield': {
+        title: 'Windshield and All Glass Polishing',
+        description: 'Restore clarity and visibility to your vehicle\'s glass surfaces with our professional polishing services.',
+        details: 'We use specialized compounds and techniques to remove scratches, water spots, and oxidation from windshields, side windows, and rear glass, restoring them to like-new condition.'
     },
-    'blog2': {
-        title: 'Success Stories: E-commerce Transformation',
-        category: 'Case Studies',
-        image: './assets/images/blog-post-2.jpeg',
-        content: `
-            <p>Your online store deserves the same level of care and expertise that went into building your business. Our e-commerce solutions are designed to drive sales and enhance customer satisfaction.</p>
-            
-            <p>From custom shopping experiences to automated inventory management, we offer comprehensive solutions that go beyond basic online catalogs. Our recent projects show an average 150% increase in conversion rates.</p>
-            
-            <p>Our clients have shared amazing results with our e-commerce platforms. Many report significant improvements in user engagement, reduced cart abandonment, and increased average order values ? all thanks to our data-driven approach to UX design.</p>
-            
-            <p>We believe that a successful online store is built on continuous optimization. That's why we provide ongoing analytics, A/B testing, and performance monitoring to ensure your store stays competitive in the ever-changing digital marketplace.</p>
-        `
+    'seat-covers': {
+        title: 'Seat Covers and Door Pad Leather Upholstery',
+        description: 'Custom leather upholstery solutions that enhance comfort and style.',
+        details: 'Premium leather seat covers and door pad upholstery tailored to your vehicle\'s interior. Available in various colors and finishes to match your preferences.'
     },
-    'blog3': {
-        title: 'The Future of AI in Web Development',
-        category: 'Innovation',
-        image: './assets/images/blog-post-3 (2).jpeg',
-        content: `
-            <p>The tech industry is being transformed by AI, and we're committed to staying at the forefront. Our investment in AI-powered development tools represents our dedication to delivering superior results faster than ever before.</p>
-            
-            <p>We're currently implementing AI-assisted coding, automated testing, and intelligent user experience personalization. This cutting-edge approach ensures that we can deliver complex projects with higher quality and shorter timelines.</p>
-            
-            <p>Our development workflow now includes advanced AI tools for code review, bug detection, and performance optimization. From chatbot integrations to predictive analytics, we offer comprehensive AI services for forward-thinking businesses.</p>
-            
-            <p>As AI continues to revolutionize web development, you can trust that Aithentic will be ready to implement the latest innovations with the highest standards of quality and ethics. The future of web development is intelligent, and we're leading the way.</p>
-        `
+    'anti-rust': {
+        title: 'Under-body Anti-rust Coatings',
+        description: 'Protect your vehicle\'s chassis from corrosion with our specialized anti-rust treatments.',
+        details: 'Comprehensive under-body protection using advanced rust-prevention coatings that shield critical components from moisture, salt, and environmental damage.'
+    },
+    'steering-gear': {
+        title: 'Steering, Gear Knob and Gear Bellow Covers',
+        description: 'Custom covers that add comfort and style to your vehicle\'s interior controls.',
+        details: 'Premium leather and fabric covers for steering wheels, gear knobs, and gear bellows, available in various styles and colors to personalize your driving experience.'
+    },
+    'mats': {
+        title: '7D Mats with Custom Stitchings',
+        description: 'Custom-fit floor mats that protect your vehicle\'s interior while adding a touch of elegance.',
+        details: 'Premium 7D floor mats with custom stitching options, perfect fit for your vehicle model, and superior protection against wear and stains.'
+    },
+    'headlight': {
+        title: 'Headlight and Taillight Restorations',
+        description: 'Restore clarity and brightness to your vehicle\'s lighting systems.',
+        details: 'Professional restoration services that remove yellowing, hazing, and oxidation from headlights and taillights, improving visibility and appearance.'
+    },
+    'washing': {
+        title: 'Body Washing and Vacuuming',
+        description: 'Comprehensive cleaning services to keep your vehicle looking its best.',
+        details: 'Thorough exterior washing and interior vacuuming services using premium products and techniques to maintain your vehicle\'s pristine condition.'
+    },
+    'headliners': {
+        title: 'Headliners Replacement',
+        description: 'Professional headliner replacement and repair services.',
+        details: 'Expert replacement of sagging or damaged headliners with premium materials, ensuring a perfect fit and factory-quality finish.'
     }
 };
 
@@ -205,6 +144,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setupOtherServicesModal();
     setupCounters();
     setupContactForm();
+    setupBlogModal();
+    setupOtherServicesModal();
 });
 
 function initialiseSmoothScroll() {
@@ -626,13 +567,22 @@ function setupContactForm() {
         // Auto-save submission to backend (text file)
         saveToBackend(submissionText);
 
-        showAlert({
-            icon: 'success',
-            title: 'Submitted!',
-            text: 'Your message has been submitted successfully. We will get back to you soon!',
-            confirmButtonText: 'OK'
-        }).then(() => {
+        // Save to backend
+        saveToBackend(submissionText).then(() => {
+            showAlert({
+                icon: 'success',
+                title: 'Submitted!',
+                text: 'Your message has been submitted successfully. We will get back to you soon.',
+                confirmButtonText: 'OK'
+            });
             form.reset();
+        }).catch((error) => {
+            showAlert({
+                icon: 'error',
+                title: 'Submission failed',
+                text: 'There was an error submitting your message. Please try again later.'
+            });
+            console.error('Submission error:', error);
         });
     });
 }
@@ -659,6 +609,41 @@ function buildSubmissionText(data) {
 function saveToBackend(content) {
     // Auto-save to backend
     const timestamp = Date.now();
+async function saveToBackend(content) {
+    try {
+        const response = await fetch('/api/save-contact.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ content })
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to save contact submission');
+        }
+
+        return await response.json();
+    } catch (error) {
+        // Fallback: Save to local file if backend is not available
+        console.warn('Backend not available, using fallback:', error);
+        
+        // For development/testing, save to localStorage
+        try {
+            const submissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
+            submissions.push({
+                content: content,
+                timestamp: new Date().toISOString()
+            });
+            localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
+            return { success: true, message: 'Saved locally (backend unavailable)' };
+        } catch (localError) {
+            throw error;
+        }
+    }
+}
+
+function downloadTextFile(filename, content) {
     const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
@@ -689,5 +674,201 @@ function showAlert(options) {
     }
 
     return Promise.resolve();
+}
+
+function setupBlogModal() {
+    const modal = document.getElementById('blogModal');
+    if (!modal) {
+        return;
+    }
+
+    const modalTitle = modal.querySelector('[data-blog-modal-title]');
+    const modalDescription = modal.querySelector('[data-blog-modal-description]');
+    const modalContent = modal.querySelector('[data-blog-modal-content]');
+    const modalImage = modal.querySelector('[data-blog-modal-image]');
+    const modalCategory = modal.querySelector('[data-blog-modal-category]');
+    const closeButtons = modal.querySelectorAll('[data-blog-modal-close]');
+    let lastFocusedElement = null;
+
+    modal.setAttribute('aria-hidden', 'true');
+
+    const renderModal = (blog) => {
+        modalTitle.textContent = blog.title;
+        modalDescription.textContent = blog.description;
+        modalContent.innerHTML = blog.content;
+        modalImage.src = blog.image;
+        modalImage.alt = blog.title;
+        modalCategory.textContent = blog.category;
+    };
+
+    const openModal = (key) => {
+        const blog = blogDetails[key];
+        if (!blog) {
+            return;
+        }
+
+        renderModal(blog);
+        lastFocusedElement = document.activeElement;
+        modal.classList.add('is-visible');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('no-scroll');
+
+        const closeButton = modal.querySelector('.blog-modal__close');
+        window.requestAnimationFrame(() => {
+            closeButton?.focus({ preventScroll: true });
+        });
+    };
+
+    const closeModal = () => {
+        modal.classList.remove('is-visible');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('no-scroll');
+        if (lastFocusedElement instanceof HTMLElement) {
+            lastFocusedElement.focus({ preventScroll: true });
+        }
+    };
+
+    document.querySelectorAll('[data-blog-key]').forEach((card) => {
+        card.addEventListener('click', () => {
+            openModal(card.dataset.blogKey);
+        });
+    });
+
+    document.querySelectorAll('[data-blog-link]').forEach((link) => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const card = link.closest('[data-blog-key]');
+            if (card) {
+                openModal(card.dataset.blogKey);
+            }
+        });
+    });
+
+    closeButtons.forEach((button) => {
+        button.addEventListener('click', closeModal);
+    });
+
+    modal.addEventListener('click', (event) => {
+        if (event.target?.dataset?.blogModalClose !== undefined) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modal.classList.contains('is-visible')) {
+            closeModal();
+        }
+    });
+}
+
+function setupOtherServicesModal() {
+    // Create modal HTML if it doesn't exist
+    let modal = document.getElementById('otherServicesModal');
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'otherServicesModal';
+        modal.className = 'service-modal';
+        modal.setAttribute('aria-hidden', 'true');
+        modal.innerHTML = `
+            <div class="service-modal__backdrop" data-other-services-close></div>
+            <div class="service-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="otherServicesModalTitle">
+                <button class="service-modal__close" type="button" data-other-services-close
+                    aria-label="Close service details">
+                    <i class="ri-close-line"></i>
+                </button>
+                <div class="service-modal__body">
+                    <div class="service-modal__text">
+                        <h3 id="otherServicesModalTitle" data-other-services-title></h3>
+                        <p data-other-services-description></p>
+                        <p data-other-services-details></p>
+                    </div>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+    }
+
+    const modalTitle = modal.querySelector('[data-other-services-title]');
+    const modalDescription = modal.querySelector('[data-other-services-description]');
+    const modalDetails = modal.querySelector('[data-other-services-details]');
+    const closeButtons = modal.querySelectorAll('[data-other-services-close]');
+    let lastFocusedElement = null;
+
+    modal.setAttribute('aria-hidden', 'true');
+
+    const renderModal = (service) => {
+        modalTitle.textContent = service.title;
+        modalDescription.textContent = service.description;
+        modalDetails.textContent = service.details;
+    };
+
+    const openModal = (key) => {
+        const service = otherServicesDetails[key];
+        if (!service) {
+            return;
+        }
+
+        renderModal(service);
+        lastFocusedElement = document.activeElement;
+        modal.classList.add('is-visible');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('no-scroll');
+
+        const closeButton = modal.querySelector('.service-modal__close');
+        window.requestAnimationFrame(() => {
+            closeButton?.focus({ preventScroll: true });
+        });
+    };
+
+    const closeModal = () => {
+        modal.classList.remove('is-visible');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('no-scroll');
+        if (lastFocusedElement instanceof HTMLElement) {
+            lastFocusedElement.focus({ preventScroll: true });
+        }
+    };
+
+    // Map footer links to service keys
+    const serviceMapping = {
+        'Windshield and all glass polishing': 'windshield',
+        'Seat covers and Door pad leather upholstery': 'seat-covers',
+        'Under-body anti-rust coatings': 'anti-rust',
+        'Steering, Gear knob and Gear bellow covers': 'steering-gear',
+        '7D matts with custom stitchings': 'mats',
+        'Headlight and taillight restorations': 'headlight',
+        'Body Washing and Vacuuming': 'washing',
+        'Headliners replacement': 'headliners'
+    };
+
+    // Add click handlers to footer links
+    document.querySelectorAll('footer ul li a').forEach((link) => {
+        const linkText = link.textContent.trim();
+        const serviceKey = serviceMapping[linkText];
+        
+        if (serviceKey) {
+            link.style.cursor = 'pointer';
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal(serviceKey);
+            });
+        }
+    });
+
+    closeButtons.forEach((button) => {
+        button.addEventListener('click', closeModal);
+    });
+
+    modal.addEventListener('click', (event) => {
+        if (event.target?.dataset?.otherServicesClose !== undefined) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modal.classList.contains('is-visible')) {
+            closeModal();
+        }
+    });
 }
 
