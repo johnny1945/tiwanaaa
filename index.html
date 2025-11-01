@@ -66,16 +66,19 @@
                 <div class="carousel-item active col-12">
                     <img src="./assets/images/hero-9.png" class="d-block w-100" alt="First slide object-fit: cover">
                     <div class="crousol1 carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <h1 class="text-uppercase text-white fw-semibold display-3 display-md-1" data-aos="fade-left">
+                        <h1 class="text-uppercase text-white fw-semibold display-3 display-md-1" data-aos="fade-left"
+                            data-hero-title>
                             WELCOME TO TIWANA AUTOMOBILES
                         </h1>
-                        <h5 class="text-white mt-3 mb-4" data-aos="fade-right">
+                        <h5 class="text-white mt-3 mb-4" data-aos="fade-right" data-hero-subtitle>
                             WE ARE TEAM OF TALENTED<span style="color: #44d125;"> DESIGNERS MAKING YOUR CAR
                                 PERFECT</span>
                         </h5>
-                        <div data-aos="fade-up" data-aos-delay="150" class="d-flex flex-column flex-md-row">
-                            <a href="#about" class="btn btn-brand mb-2 mb-md-0 me-md-2">Get started</a>
-                            <a href="#works" class="btn btn-light ms-md-2">Our works</a>
+                        <div data-aos="fade-up" data-aos-delay="150"
+                            class="d-flex flex-column flex-md-row gap-2 justify-content-center justify-content-md-start"
+                            data-hero-cta>
+                            <a href="#about" class="btn btn-brand mb-0" data-hero-primary-cta>Get started</a>
+                            <a href="#works" class="btn btn-outline-light mb-0" data-hero-secondary-cta>Our works</a>
                         </div>
                     </div>
                 </div>
@@ -175,132 +178,167 @@
 
 
 
-    <section id="services" class="section-padding bg-black " style="margin-top: -60px;">
+    <section id="services" class="section-padding bg-black">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
                     <div class="section-title">
-                        <h1 class="display-4 fw-semibold">Awesome Services</h1>
+                        <h1 class="display-4 fw-semibold">Signature Services</h1>
                         <div class="line"></div>
                         <p>
-                            The Aftersales team at Tiwana Automobiles has a state-of-the-art facility with multiple
-                            efficient service bays to provide its customers with a great service experience ensuring
-                            quality, efficiency and innovation. Tiwana Automobiles has a Fast Lane Service facility with
-                            a team of highly trained professionals who ensure a quick turnaround time.
+                            From precision restoration to premium detailing, discover how we keep every European vehicle
+                            performing and looking its best.
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="row g-4 text-center">
-
-                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="350">
-                    <a href="#">
-                        <div class="service theme-shadow">
-                            <div class="image-container ">
-                                <img src="./assets/images/services-1.jpeg" alt="Body Repairs Works"
-                                    class="iconbox opacity-75" loading="lazy">
-                                <div class="overlay">
-                                    <h5 class="overlay-title">Body Repairs Works</h5>
-
-                                </div>
-                            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+                    <button type="button" class="service-card theme-shadow" data-service-key="body-repair"
+                        aria-label="View details for body repair excellence">
+                        <div class="service-card__media">
+                            <img src="./assets/images/services-1.jpeg" alt="Body repair experts at work"
+                                loading="lazy">
+                            <span class="service-card__badge">Collision Care</span>
                         </div>
-                    </a>
+                        <div class="service-card__content">
+                            <h5>Body Repair Excellence</h5>
+                            <p>Precision alignments and flawless panel restoration that keep factory standards intact.</p>
+                            <span class="service-card__cta">View Details</span>
+                        </div>
+                    </button>
                 </div>
 
-                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="450">
-                    <a href="#">
-                        <div class="service theme-shadow">
-                            <div class="image-container ">
-                                <img src="./assets/images/services-3.jpeg" alt="Maintenance Services & Repairs"
-                                    class="iconbox opacity-75" loading="lazy">
-                                <div class="overlay">
-                                    <h5 class="overlay-title">Maintenance Services & Repairs</h5>
-
-                                </div>
-                            </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <button type="button" class="service-card theme-shadow" data-service-key="maintenance"
+                        aria-label="View details for scheduled maintenance">
+                        <div class="service-card__media">
+                            <img src="./assets/images/services-3.jpeg" alt="Technicians performing scheduled service"
+                                loading="lazy">
+                            <span class="service-card__badge">365 Support</span>
                         </div>
-                    </a>
+                        <div class="service-card__content">
+                            <h5>Scheduled Maintenance</h5>
+                            <p>Dealer-level diagnostics, inspections, and preventive care tailored to European models.</p>
+                            <span class="service-card__cta">View Details</span>
+                        </div>
+                    </button>
                 </div>
 
-                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="550">
-                    <a href="#">
-                        <div class="service theme-shadow">
-                            <div class="image-container ">
-                                <img src="./assets/images/services-4.jpg" alt="Major Assy Overhauls & Repairs"
-                                    class="iconbox opacity-75" loading="lazy">
-                                <div class="overlay">
-                                    <h5 class="overlay-title">Major Assy Overhauls & Repairs</h5>
-
-                                </div>
-                            </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+                    <button type="button" class="service-card theme-shadow" data-service-key="overhaul"
+                        aria-label="View details for drivetrain overhauls">
+                        <div class="service-card__media">
+                            <img src="./assets/images/services-4.jpg" alt="Engine overhaul in progress" loading="lazy">
+                            <span class="service-card__badge">Powertrain</span>
                         </div>
-                    </a>
+                        <div class="service-card__content">
+                            <h5>Major Assembly Overhauls</h5>
+                            <p>Engine, transmission, and suspension rebuilds engineered for long-term reliability.</p>
+                            <span class="service-card__cta">View Details</span>
+                        </div>
+                    </button>
                 </div>
 
-                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="250">
-                    <a href="#">
-                        <div class="service theme-shadow">
-                            <div class="image-container ">
-                                <img src="./assets/images/services-5.jpg" alt="Paint Repairs works"
-                                    class="iconbox opacity-75" loading="lazy">
-                                <div class="overlay">
-                                    <h5 class="overlay-title">Paint Repairs works</h5>
-
-                                </div>
-                            </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <button type="button" class="service-card theme-shadow" data-service-key="paint"
+                        aria-label="View details for paint studio">
+                        <div class="service-card__media">
+                            <img src="./assets/images/services-5.jpg" alt="Luxury car paint booth" loading="lazy">
+                            <span class="service-card__badge">Finish Lab</span>
                         </div>
-                    </a>
+                        <div class="service-card__content">
+                            <h5>Paint Studio & Detailing</h5>
+                            <p>Glass-like finishes, colour matching, and ceramic protection inside state-of-the-art booths.</p>
+                            <span class="service-card__cta">View Details</span>
+                        </div>
+                    </button>
                 </div>
 
-                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="350">
-                    <a href="#">
-                        <div class="service theme-shadow">
-                            <div class="image-container ">
-                                <img src="./assets/images/services-6.jpeg"
-                                    alt="Washing cleaning interior & exterior detailing" class="iconbox opacity-75"
-                                    loading="lazy">
-                                <div class="overlay">
-                                    <h5 class="overlay-title">Washing cleaning interior & exterior detailing</h5>
-
-                                </div>
-                            </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="350">
+                    <button type="button" class="service-card theme-shadow" data-service-key="detailing"
+                        aria-label="View details for detailing lounge">
+                        <div class="service-card__media">
+                            <img src="./assets/images/services-6.jpeg"
+                                alt="Crew detailing the interior of a luxury vehicle" loading="lazy">
+                            <span class="service-card__badge">Detailing Lab</span>
                         </div>
-                    </a>
+                        <div class="service-card__content">
+                            <h5>Detailing Lounge</h5>
+                            <p>Interior spa treatments, ozone sanitising, and hydrophobic coatings for a showroom glow.</p>
+                            <span class="service-card__cta">View Details</span>
+                        </div>
+                    </button>
                 </div>
 
-                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="550">
-                    <a href="#">
-                        <div class="service theme-shadow">
-                            <div class="image-container ">
-                                <img src="./assets/images/services-8.jpeg" alt="Other Services"
-                                    class="iconbox opacity-75" loading="lazy">
-                                <div class="overlay">
-                                    <h5 class="overlay-title">Other Services</h5>
-
-                                </div>
-                            </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <button type="button" class="service-card theme-shadow" data-service-key="enhancements"
+                        aria-label="View details for custom enhancements">
+                        <div class="service-card__media">
+                            <img src="./assets/images/services-8.jpeg" alt="Technician applying performance upgrades"
+                                loading="lazy">
+                            <span class="service-card__badge">Custom Lab</span>
                         </div>
-                    </a>
+                        <div class="service-card__content">
+                            <h5>Custom Enhancements</h5>
+                            <p>Performance tuning, wrap jobs, and lifestyle upgrades crafted around your driving goals.</p>
+                            <span class="service-card__cta">View Details</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="service-modal" id="serviceModal" aria-hidden="true">
+                <div class="service-modal__backdrop" data-modal-close></div>
+                <div class="service-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="serviceModalTitle">
+                    <button class="service-modal__close" type="button" data-modal-close
+                        aria-label="Close service details">
+                        <i class="ri-close-line"></i>
+                    </button>
+                    <div class="service-modal__body">
+                        <div class="service-modal__image-wrapper">
+                            <img src="" alt="" class="service-modal__image" data-modal-image loading="lazy">
+                        </div>
+                        <div class="service-modal__text">
+                            <h3 id="serviceModalTitle" data-modal-title></h3>
+                            <p data-modal-description></p>
+                            <ul class="service-modal__list" data-modal-list></ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="counter" class="section-padding mt-2">
-        <div class="container text-center">
-            <div class="row g-4">
-                <div class="col-lg-4 col-sm-7" data-aos="fade-down" data-aos-delay="150">
-                    <h1 class="text-white display-4 bold">90,000+</h1>
-                    <h6 class="text-uppercase text-white mb-0 mt-3">Total Works</h6>
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="150">
+                    <div class="counter-card theme-shadow">
+                        <div class="counter-icon">
+                            <i class="ri-tools-line"></i>
+                        </div>
+                        <span class="counter-value" data-counter-target="90000" data-counter-suffix="+">0</span>
+                        <p class="counter-label">Total Works</p>
+                    </div>
                 </div>
-                <div class="col-lg-4 col-sm-7" data-aos="fade-down" data-aos-delay="250">
-                    <h1 class="text-white display-4">58k+</h1>
-                    <h6 class="text-uppercase text-white mb-0 mt-3">Trusted Clients</h6>
+                <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="250">
+                    <div class="counter-card theme-shadow">
+                        <div class="counter-icon">
+                            <i class="ri-user-star-line"></i>
+                        </div>
+                        <span class="counter-value" data-counter-target="58000" data-counter-suffix="+">0</span>
+                        <p class="counter-label">Trusted Clients</p>
+                    </div>
                 </div>
-                <div class="col-lg-4 col-sm-7" data-aos="fade-down" data-aos-delay="350">
-                    <h1 class="text-white display-4">55+</h1>
-                    <h6 class="text-uppercase text-white mb-0 mt-3">Team Members</h6>
+                <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="350">
+                    <div class="counter-card theme-shadow">
+                        <div class="counter-icon">
+                            <i class="ri-team-line"></i>
+                        </div>
+                        <span class="counter-value" data-counter-target="55" data-counter-suffix="+">0</span>
+                        <p class="counter-label">Team Members</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -324,14 +362,16 @@
                         <div class="image-zoom-wrapper">
                             <img src="./assets/images/project-1.jpeg" alt="work 1" loading="lazy">
                         </div>
-                        <a href="./assets/images/project-1.jpeg" data-fancybox="gallery" class="searchbox"><i
+                        <a href="./assets/images/project-1.jpeg" data-fancybox="gallery"
+                            data-caption="BMW M4: complete body restoration" class="searchbox"><i
                                 class="ri-search-2-line"></i></a>
                     </div>
                     <div class="portfolio-item image-zoom mt-4">
                         <div class="image-zoom-wrapper">
                             <img src="./assets/images/project-2.jpeg" alt="work 2" loading="lazy" />
                         </div>
-                        <a href="./assets/images/project-2.jpeg" data-fancybox="gallery" class="searchbox"><i
+                        <a href="./assets/images/project-2.jpeg" data-fancybox="gallery"
+                            data-caption="Audi RS7 matte wrap with ceramic protection" class="searchbox"><i
                                 class="ri-search-2-line"></i></a>
                     </div>
                 </div>
@@ -340,14 +380,16 @@
                         <div class="image-zoom-wrapper">
                             <img src="./assets/images/project-3.jpeg" alt="work 3" loading="lazy">
                         </div>
-                        <a href="./assets/images/project-3.jpeg" data-fancybox="gallery" class="searchbox"><i
+                        <a href="./assets/images/project-3.jpeg" data-fancybox="gallery"
+                            data-caption="Mercedes-Benz S-Class drivetrain overhaul" class="searchbox"><i
                                 class="ri-search-2-line"></i></a>
                     </div>
                     <div class="portfolio-item image-zoom mt-4">
                         <div class="image-zoom-wrapper">
                             <img src="./assets/images/project-4.jpeg" alt="work 4" loading="lazy" />
                         </div>
-                        <a href="./assets/images/project-4.jpeg" data-fancybox="gallery" class="searchbox"><i
+                        <a href="./assets/images/project-4.jpeg" data-fancybox="gallery"
+                            data-caption="Lamborghini Hurac?n custom detailing" class="searchbox"><i
                                 class="ri-search-2-line"></i></a>
                     </div>
                 </div>
@@ -356,14 +398,16 @@
                         <div class="image-zoom-wrapper">
                             <img src="./assets/images/project-5.jpeg" alt="work 5" loading="lazy">
                         </div>
-                        <a href="./assets/images/project-5.jpeg" data-fancybox="gallery" class="searchbox"><i
+                        <a href="./assets/images/project-5.jpeg" data-fancybox="gallery"
+                            data-caption="Porsche 911 paint correction and PPF" class="searchbox"><i
                                 class="ri-search-2-line"></i></a>
                     </div>
                     <div class="portfolio-item image-zoom mt-4">
                         <div class="image-zoom-wrapper">
                             <img src="./assets/images/services-1.jpeg" alt="work 6" loading="lazy" />
                         </div>
-                        <a href="./assets/images/services-1.jpeg" data-fancybox="gallery" class="searchbox"><i
+                        <a href="./assets/images/services-1.jpeg" data-fancybox="gallery"
+                            data-caption="Bentley Continental structural repair" class="searchbox"><i
                                 class="ri-search-2-line"></i></a>
                     </div>
                 </div>
@@ -393,16 +437,16 @@
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-fill"></i>
                             </div>
-                            <p style="color: white;">The team at this workshop is truly outstanding! They repaired my
-                                car quickly and kept me updated every step of the way. It's hard to find a service
-                                center that genuinely cares, but these guys exceeded all my expectations.</p>
+                            <p style="color: white;">Flawless experience from drop-off to delivery. My BMW 5 Series
+                                looks showroom-ready again and the team even shared a preventive care plan tailored for
+                                Delhi roads.</p>
                         </div>
                         <div class="review-person d-flex align-items-center mt-4">
                             <img class="rounded-circle" src="./assets/images/avatar-1.jpg" alt="reviews 1"
                                 loading="lazy">
                             <div class="ms-3">
-                                <h5>Dianne Russell</h5>
-                                <small> Valuable Customer </small>
+                                <h5>Rohit Sharma</h5>
+                                <small>Entrepreneur, New Delhi</small>
                             </div>
                         </div>
                     </div>
@@ -417,16 +461,16 @@
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-fill"></i>
                             </div>
-                            <p style="color: white;">I brought my car in for a brake repair, and they did an amazing
-                                job. The service was fast, efficient, and reasonably priced. I also appreciated their
-                                friendly attitude and clear communication throughout the entire process.</p>
+                            <p style="color: white;">The technicians diagnosed a tricky brake issue on my Audi Q7 in a
+                                single visit. Transparent updates, genuine parts, and the car now drives smoother than
+                                ever.</p>
                         </div>
                         <div class="review-person d-flex align-items-center mt-4">
                             <img class="rounded-circle" src="./assets/images/avatar-2.jpg" alt="reviews 2"
                                 loading="lazy">
                             <div class="ms-3">
-                                <h5>Dianne Russell</h5>
-                                <small> Valuable Customer </small>
+                                <h5>Priya Mehta</h5>
+                                <small>Consultant, Gurugram</small>
                             </div>
                         </div>
                     </div>
@@ -441,16 +485,15 @@
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-fill"></i>
                             </div>
-                            <p style="color: white;">From the moment I walked in, I felt confident in their abilities.
-                                They diagnosed the issue with my engine and fixed it in no time. The car feels brand
-                                new, and I couldn't be happier with their service!</p>
+                            <p style="color: white;">My Mercedes GLE had persistent engine vibrations. Tiwana's crew
+                                rebuilt the assembly with OEM specs and delivered it in record time. Truly world-class.</p>
                         </div>
                         <div class="review-person d-flex align-items-center mt-4">
                             <img class="rounded-circle" src="./assets/images/avatar-3.jpg" alt="reviews 3"
                                 loading="lazy">
                             <div class="ms-3">
-                                <h5>Dianne Russell</h5>
-                                <small> Valuable Customer </small>
+                                <h5>Arjun Malhotra</h5>
+                                <small>Hotelier, Chandigarh</small>
                             </div>
                         </div>
                     </div>
@@ -465,16 +508,16 @@
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-fill"></i>
                             </div>
-                            <p style="color: white;">Incredible experience! They not only fixed the problem but also
-                                gave me advice on how to better maintain my vehicle. Their professionalism and expertise
-                                were evident, and I'm grateful to have found such a reliable workshop.</p>
+                            <p style="color: white;">Detailing perfection! My Mini Cooper received ceramic coating and
+                                interior spa treatment. The gloss has lasted through monsoon showers without a single
+                                swirl mark.</p>
                         </div>
                         <div class="review-person d-flex align-items-center mt-4">
                             <img class="rounded-circle" src="./assets/images/avatar-4.jpg" alt="reviews 4"
                                 loading="lazy">
                             <div class="ms-3">
-                                <h5>Dianne Russell</h5>
-                                <small> Valuable Customer </small>
+                                <h5>Sneha Kapoor</h5>
+                                <small>Creative Director, Mumbai</small>
                             </div>
                         </div>
                     </div>
@@ -489,16 +532,16 @@
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-fill"></i>
                             </div>
-                            <p style="color: white;">A friend recommended this place, and I'm so glad they did! The
-                                mechanics are knowledgeable, and the service was completed quicker than expected. I'll
-                                definitely be coming back for all my car needs in the future.</p>
+                            <p style="color: white;">Trustworthy team that treats your vehicle like their own. They
+                                revived my decade-old Skoda with OEM painting and insured repairs, all within the quoted
+                                budget.</p>
                         </div>
                         <div class="review-person d-flex align-items-center mt-4">
                             <img class="rounded-circle" src="./assets/images/avatar-5.jpg" alt="reviews 5"
                                 loading="lazy">
                             <div class="ms-3">
-                                <h5>Dianne Russell</h5>
-                                <small> Valuable Customer </small>
+                                <h5>Ananya Iyer</h5>
+                                <small>Architect, Bengaluru</small>
                             </div>
                         </div>
                     </div>
@@ -513,16 +556,15 @@
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-fill"></i>
                             </div>
-                            <p style="color: white;">This workshop is hands down the best! They worked on my car's
-                                suspension, and the difference is night and day. It rides smoother than ever, and their
-                                customer service made the whole process stress-free.</p>
+                            <p style="color: white;">Their suspension tuning transformed how my Porsche Cayenne
+                                handles. Responsive updates on WhatsApp and meticulous road-testing before delivery.</p>
                         </div>
                         <div class="review-person d-flex align-items-center mt-4">
                             <img class="rounded-circle" src="./assets/images/avatar-6.jpg" alt="reviews 6"
                                 loading="lazy">
                             <div class="ms-3">
-                                <h5>Dianne Russell</h5>
-                                <small> Valuable Customer </small>
+                                <h5>Karan Batra</h5>
+                                <small>Auto Enthusiast, Ludhiana</small>
                             </div>
                         </div>
                     </div>
@@ -588,32 +630,65 @@
                     <div class="section-title">
                         <h1 class="display-4 text-white fw-semibold">Get in touch</h1>
                         <div class="line text-white"></div>
-                        <p class="text-white">Have questions or need assistance? We're here to help! Reach out to us
-                            today, and let's get your vehicle back on track.</p>
+                        <p class="text-white">Have questions or need assistance? We're here to help! Reach out today and
+                            let's get your vehicle back on track.</p>
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center" data-aos="fade-down" data-aos-delay="250">
+            <div class="row g-4 align-items-stretch" data-aos="fade-down" data-aos-delay="250">
+                <div class="col-lg-4">
+                    <div class="contact-card theme-shadow h-100">
+                        <div class="contact-card__badge">Workshop Support</div>
+                        <h5 class="text-white">Talk to our specialists</h5>
+                        <p class="text-white-50 mb-4">Call, visit, or drop a message anytime between 9:00 AM and 7:00 PM.
+                        </p>
+                        <ul class="contact-card__list">
+                            <li><i class="ri-phone-line"></i><a href="tel:+919888888888">+91 98888 88888</a></li>
+                            <li><i class="ri-mail-line"></i><a href="mailto:hello@tiwanaauto.in">hello@tiwanaauto.in</a>
+                            </li>
+                            <li><i class="ri-map-pin-line"></i>Plot 181/6, Industrial Area Phase 1, Chandigarh</li>
+                            <li><i class="ri-time-line"></i>Monday - Saturday, 9:00 AM to 7:00 PM</li>
+                        </ul>
+                        <div class="contact-card__cta">
+                            <span>Need urgent assistance?</span>
+                            <a class="btn btn-sm btn-outline-light mt-3" href="tel:+919888888888">Call Now</a>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-lg-8">
-                    <form action="#" class="row g-3 p-lg-5 p-4 bg-white theme-shadow" method="post">
-                        <div class="form-group col-lg-6">
-                            <input type="text" class="form-control" placeholder="Enter first name">
+                    <form id="contactForm" class="contact-form row g-3 p-lg-5 p-4 bg-white theme-shadow" novalidate>
+                        <div class="form-group col-md-6">
+                            <label for="firstName" class="form-label visually-hidden">First Name</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName"
+                                placeholder="Enter first name" required>
                         </div>
-                        <div class="form-group col-lg-6">
-                            <input type="text" class="form-control" placeholder="Enter last name">
+                        <div class="form-group col-md-6">
+                            <label for="lastName" class="form-label visually-hidden">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" name="lastName"
+                                placeholder="Enter last name" required>
                         </div>
-                        <div class="form-group col-lg-12">
-                            <input type="email" class="form-control" placeholder="Enter Email address">
+                        <div class="form-group col-md-6">
+                            <label for="email" class="form-label visually-hidden">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Enter email address" required>
                         </div>
-                        <div class="form-group col-lg-12">
-                            <input type="text" class="form-control" placeholder="Enter subject">
+                        <div class="form-group col-md-6">
+                            <label for="phone" class="form-label visually-hidden">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone number"
+                                pattern="[0-9+\-()\s]{7,}" required>
                         </div>
-                        <div class="form-group col-lg-12">
-                            <textarea name="message" rows="5" class="form-control"
-                                placeholder="Enter Message"></textarea>
+                        <div class="form-group col-12">
+                            <label for="subject" class="form-label visually-hidden">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject"
+                                placeholder="Enter subject" required>
                         </div>
-                        <div class="form-group col-lg-12 d-grid">
-                            <button class="btn btn-brand" onclick="sweet()">Send Message</button>
+                        <div class="form-group col-12">
+                            <label for="message" class="form-label visually-hidden">Message</label>
+                            <textarea id="message" name="message" rows="5" class="form-control"
+                                placeholder="Tell us more about your vehicle" required></textarea>
+                        </div>
+                        <div class="form-group col-12 d-grid">
+                            <button type="submit" class="btn btn-brand">Send Message</button>
                         </div>
                     </form>
                 </div>
@@ -628,95 +703,60 @@
                     <div class="section-title">
                         <h1 class="display-4 fw-semibold">Recent News & Articles</h1>
                         <div class="line"></div>
-                        <p>Stay tuned for the latest tips, updates, and insights from the world of automobiles. Check
-                            out our next blog post and drive your knowledge further!</p>
+                        <p>Fresh stories from our workshop floor, strategy desk, and customer community to keep you
+                            inspired on every drive.</p>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <!-- Blog Post 1 -->
-                <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
-                    <div class="team-member image-zoom">
-                        <div class="image-zoom-wrapper">
-                            <img src="./assets/images/blog-post-1.jpeg" alt="blog post 1" loading="lazy">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+                    <article class="blog-card theme-shadow h-100">
+                        <div class="blog-card__media image-zoom">
+                            <div class="image-zoom-wrapper">
+                                <img src="./assets/images/blog-post-1.jpeg" alt="Tiwana performance lab" loading="lazy">
+                            </div>
+                            <span class="blog-card__category">Workshop</span>
                         </div>
-                        <h5 class="mt-4">New Store</h5>
-                        <div class="description">
-                            <p class="text-content" style="color: white;">
-                                We're excited to unveil our brand-new store, designed with you in mind. Our new location
-                                offers a state-of-the-art facility, complete with the latest automotive technology and a
-                                comprehensive range of products and services.
-                                <span class="full-text" style="display: none;">
-                                    Whether you're looking for high-quality parts, expert repairs, or personalized
-                                    advice, our
-                                    new store has it all. Visit us to experience top-notch customer service and discover
-                                    how we
-                                    can help keep your vehicle in peak condition. Come by and see for yourself how we're
-                                    redefining automotive care!
-                                </span>
-                                <br>
-                                <a href="#" class="read-more">Read More</a>
-                            </p>
+                        <div class="blog-card__body">
+                            <h5>Inside Our Performance Lab</h5>
+                            <p>Take a behind-the-scenes look at how every drivetrain calibration is validated before a
+                                customer test drive.</p>
+                            <a href="#" class="blog-card__link">Read Story</a>
                         </div>
-                    </div>
+                    </article>
                 </div>
-
-                <!-- Blog Post 2 -->
-                <div class="col-md-4" data-aos="fade-down" data-aos-delay="250">
-                    <div class="team-member image-zoom">
-                        <div class="image-zoom-wrapper">
-                            <img src="./assets/images/blog-post-2.jpeg" alt="blog post 2" loading="lazy">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+                    <article class="blog-card theme-shadow h-100">
+                        <div class="blog-card__media image-zoom">
+                            <div class="image-zoom-wrapper">
+                                <img src="./assets/images/blog-post-2.jpeg" alt="Customer delivery bay" loading="lazy">
+                            </div>
+                            <span class="blog-card__category">Customer Stories</span>
                         </div>
-                        <h5 class="mt-4">New Theme</h5>
-                        <div class="description">
-                            <p class="text-content" style="color: white;">
-                                We're thrilled to introduce our exciting new theme, designed to enhance your browsing
-                                experience and bring a fresh, modern look to our website.
-                                <span class="full-text" style="display: none;">
-                                    This theme not only updates our visual style but also improves functionality, making
-                                    it
-                                    easier for you to navigate and find what you need. With a sleek design, intuitive
-                                    layout,
-                                    and vibrant aesthetics, our new theme reflects our commitment to innovation and user
-                                    satisfaction. Explore the changes and enjoy a more engaging and streamlined
-                                    experience with
-                                    us!
-                                </span>
-                                <br>
-                                <a href="#" class="read-more">Read More</a>
-                            </p>
+                        <div class="blog-card__body">
+                            <h5>Weekend Detailing Rituals</h5>
+                            <p>From ceramic coats to interior ozone refresh, learn how our customers keep their garage
+                                jewels gleaming.</p>
+                            <a href="#" class="blog-card__link">Discover Tips</a>
                         </div>
-                    </div>
+                    </article>
                 </div>
-
-                <!-- Blog Post 3 -->
-                <div class="col-md-4" data-aos="fade-down" data-aos-delay="350">
-                    <div class="team-member image-zoom">
-                        <div class="image-zoom-wrapper">
-                            <img src="./assets/images/blog-post-3 (2).jpeg" alt="blog post 3" loading="lazy">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="350">
+                    <article class="blog-card theme-shadow h-100">
+                        <div class="blog-card__media image-zoom">
+                            <div class="image-zoom-wrapper">
+                                <img src="./assets/images/blog-post-3 (2).jpeg" alt="New European service bay"
+                                    loading="lazy">
+                            </div>
+                            <span class="blog-card__category">Insights</span>
                         </div>
-                        <h5 class="mt-4">New Services</h5>
-                        <div class="description">
-                            <p class="text-content" style="color: white;">
-                                We're delighted to announce the launch of several new services designed to provide you
-                                with
-                                even greater value and convenience.
-                                <span class="full-text" style="display: none;">
-                                    From advanced diagnostics and personalized maintenance plans to enhanced repair
-                                    options, our
-                                    new services are crafted to meet the evolving needs of our customers. Each service
-                                    is
-                                    delivered with the same commitment to quality and excellence that you've come to
-                                    expect from
-                                    us. Explore these new offerings and see how they can make your vehicle care
-                                    experience even
-                                    better!
-                                </span>
-                                <br>
-                                <a href="#" class="read-more">Read More</a>
-                            </p>
+                        <div class="blog-card__body">
+                            <h5>Upcoming EV Service Capabilities</h5>
+                            <p>We're investing in high-voltage tooling and certified training to future-proof your
+                                electric fleet.</p>
+                            <a href="#" class="blog-card__link">Learn More</a>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </div>
@@ -785,10 +825,10 @@
             <div class="container">
                 <div class="row g-4 justify-content-between">
                     <div class="col-auto">
-                        <p class="mb-0">© Copyright Tiwana. All Rights Reserved</p>
+                        <p class="mb-0">? Copyright Tiwana. All Rights Reserved</p>
                     </div>
                     <div class="col-auto">
-                        <p class="mb-0">Designed with 💜 By <a href="#">AMIT</a></p>
+                        <p class="mb-0">Designed with ?? By <a href="#">AMIT</a></p>
                     </div>
                 </div>
             </div>
@@ -800,6 +840,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./assets/js/main.js"></script>
 </body>
