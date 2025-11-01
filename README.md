@@ -1,54 +1,44 @@
-TIWANA-WEBSITE
-Empowering Connections, Inspiring Innovation, Elevating Presence
+Aithentic Product Showcase Site
+================================
 
-last-commit repo-top-language repo-language-count
-Built with the tools and technologies:
+Aithentic is a launchpad-themed marketing site for digital product teams. It now includes:
 
-Markdown
+- A fully rethemed hero, services, works, testimonials, and contact sections tailored to SaaS and product launches
+- Interactive modals for services, blog articles, and footer "Other Services" listings
+- Animated footer link underlines for additional polish
+- A lightweight Express backend that persists contact submissions to `data/contact-submissions.txt`
 
-Table of Contents
-Overview
 Getting Started
-Prerequisites
-Installation
-Usage
-Testing
-Overview
-tiwana-website is a foundational web template designed to help developers quickly set up a responsive and interactive personal or professional website. It provides a clean, structured index.html that orchestrates stylesheets, scripts, and UI components to deliver a cohesive user experience.
+---------------
 
-Why tiwana-website?
+### Prerequisites
 
-This project simplifies the process of creating a polished web presence by providing a robust main entry point. The core features include:
+- Node.js 18 or newer
 
-🧩 🎨 Layout & Responsiveness: Establishes a flexible, visually appealing structure adaptable to various devices.
-🚀 ⚙️ Script & Style Integration: Seamlessly includes essential assets for interactivity and design consistency.
-🧭 Navigation Framework: Defines intuitive navigation for smooth user journeys.
-🖼️ Asset Cohesion: Integrates UI components and assets for a unified presentation.
-🔧 Extensibility: Easily customizable to fit specific branding or content needs.
-Getting Started
-Prerequisites
-This project requires the following dependencies:
+### Installation
 
-Programming Language: HTML
-Installation
-Build tiwana-website from the source and install dependencies:
+```bash
+npm install
+```
 
-Clone the repository:
+### Running locally
 
-❯ git clone https://github.com/Amitkumar0111/tiwana-website
-Navigate to the project directory:
+The project ships with an Express server that serves the static site and exposes the `/api/contact` endpoint used by the contact form.
 
-❯ cd tiwana-website
-Install the dependencies:
+```bash
+npm start
+```
 
-echo 'INSERT-INSTALL-COMMAND-HERE'
+By default the site is available at [http://localhost:3000](http://localhost:3000).
 
-Usage
-Run the project with:
+### Contact submissions
 
-echo 'INSERT-RUN-COMMAND-HERE'
+Each successful form submission appends a timestamped entry to `data/contact-submissions.txt`. The directory and file are created automatically on first use.
 
-Testing
-Tiwana-website uses the {test_framework} test framework. Run the test suite with:
+Project Structure Highlights
+----------------------------
 
-echo 'INSERT-TEST-COMMAND-HERE'
+- `index.html` – marketing site content and markup
+- `assets/css/style.css` – custom styling, animations, and modal layouts
+- `assets/js/main.js` – front-end behaviour, modals, counters, and contact form logic
+- `server.js` – Express server handling contact persistence and static asset serving
