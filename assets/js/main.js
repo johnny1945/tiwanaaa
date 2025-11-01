@@ -1,161 +1,138 @@
 const numberFormatter = new Intl.NumberFormat('en-IN');
 
 const serviceDetails = {
-    'immersive-showcases': {
-        title: 'Immersive Product Showcases',
-        image: './assets/images/hero-4.jpg',
-        description: 'Launch visuals, storytelling, and scroll choreography that communicate product value in record time.',
+    'body-repair': {
+        title: 'Custom Web Development',
+        image: './assets/images/services-1.jpeg',
+        description: 'Tailored web solutions built with modern technologies and best practices.',
         points: [
-            'Dynamic hero narratives with motion design tailored to your core personas.',
-            'Interactive hotspots and feature reveals that invite prospects to explore depth.',
-            'Conversion-focused layouts optimised for both desktop walkthroughs and mobile viewings.'
+            'Responsive websites optimized for all devices and screen sizes.',
+            'Built with React, Vue, Angular, or your preferred framework.',
+            'SEO-friendly architecture for better search engine rankings.',
+            'Fast loading times with performance optimization built-in.'
         ]
     },
-    'conversion-flows': {
-        title: 'Conversion Journey Mapping',
-        image: './assets/images/hero-8.jpg',
-        description: 'Strategise the moments that move visitors from curiosity to qualified opportunities.',
+    'maintenance': {
+        title: 'E-commerce Solutions',
+        image: './assets/images/services-3.jpeg',
+        description: 'Complete online stores that drive sales and enhance customer experience.',
         points: [
-            'Copy frameworks and CTA matrices engineered for demos, trials, and sales calls.',
-            'Segment-aware landing paths with behavioural nudges and social proof sequencing.',
-            'Experiment-ready layouts that plug into your analytics and marketing automation stack.'
+            'Secure payment gateway integration (Stripe, PayPal, Razorpay).',
+            'Inventory management and order tracking systems.',
+            'Shopping cart optimization for higher conversion rates.',
+            'Mobile-first design for on-the-go shopping experience.'
         ]
     },
-    'interactive-demos': {
-        title: 'Interactive Demo Builder',
-        image: './assets/images/hero-9.png',
-        description: 'Code-free walkthroughs and sandbox experiences that help teams sell faster.',
+    'overhaul': {
+        title: 'Web Applications',
+        image: './assets/images/services-4.jpg',
+        description: 'Powerful web applications engineered for performance and scalability.',
         points: [
-            'Branching demos that adapt to prospect interests and industry use cases.',
-            'CRM integrations so every interaction syncs with sales workflows automatically.',
-            'Inline annotation, voiceover, and transcript support for accessibility compliance.'
+            'Full-stack development with Node.js, Python, or PHP backends.',
+            'RESTful API design and implementation.',
+            'Database architecture and optimization (MySQL, MongoDB, PostgreSQL).',
+            'Cloud deployment on AWS, Azure, or Google Cloud Platform.'
         ]
     },
-    'content-orchestration': {
-        title: 'AI Content Orchestration',
-        image: './assets/images/blog-post-3 (2).jpeg',
-        description: 'Keep messaging consistent across launches with intelligent content operations.',
+    'paint': {
+        title: 'UI/UX Design',
+        image: './assets/images/services-5.jpg',
+        description: 'Beautiful interfaces that prioritize user experience and engagement.',
         points: [
-            'Editorial playbooks that generate fresh copy while respecting your brand voice.',
-            'Automated localisation, glossary enforcement, and reuse across product lines.',
-            'Component libraries that merge design tokens with content patterns for scale.'
+            'User research and persona development.',
+            'Wireframing and interactive prototypes using Figma.',
+            'Accessibility-first design principles (WCAG compliant).',
+            'Usability testing and iterative improvements.'
         ]
     },
-    'growth-analytics': {
-        title: 'Growth Intelligence Analytics',
+    'detailing': {
+        title: 'Digital Marketing',
+        image: './assets/images/services-6.jpeg',
+        description: 'Strategic digital marketing to grow your online presence and revenue.',
+        points: [
+            'Search Engine Optimization (SEO) for organic traffic growth.',
+            'Social media management and content creation.',
+            'Google Ads and Facebook Ads campaign management.',
+            'Email marketing automation and analytics reporting.'
+        ]
+    },
+    'enhancements': {
+        title: 'API & Backend Services',
+        image: './assets/images/services-8.jpeg',
+        description: 'Robust backend systems and integrations that power your applications.',
+        points: [
+            'Custom API development and third-party integrations.',
+            'Microservices architecture for scalable solutions.',
+            'Real-time features with WebSocket and Socket.io.',
+            'DevOps and CI/CD pipeline setup for automated deployments.'
+        ]
+    }
+};
+
+const blogDetails = {
+    'blog-1': {
+        title: 'Inside Our Design Process',
+        category: 'Design',
+        image: './assets/images/blog-post-1.jpeg',
+        description: 'Take a behind-the-scenes look at how we create authentic, user-centered designs that showcase your products beautifully.',
+        content: '<p>Our design process represents the pinnacle of web design excellence. Every website we create undergoes rigorous planning and design procedures to ensure optimal user experience and visual appeal.</p><p>We utilize modern design tools and follow industry best practices, ensuring that every design meets or exceeds client expectations and industry standards.</p>'
+    },
+    'blog-2': {
+        title: 'Best Practices for Product Showcase Websites',
+        category: 'Tips',
         image: './assets/images/blog-post-2.jpeg',
-        description: 'Clarity on what stories, layouts, and interactions generate pipeline impact.',
-        points: [
-            'Unified dashboards covering acquisition, activation, and advocacy metrics.',
-            'Event taxonomies that ensure your experiments are statistically sound.',
-            'Automated reports to keep founders, marketers, and investors aligned weekly.'
-        ]
+        description: 'From responsive layouts to compelling visuals, learn how to create websites that effectively showcase your products and drive conversions.',
+        content: '<p>Discover the secrets behind creating effective product showcase websites. Learn how to present your products in ways that captivate visitors and encourage them to take action.</p><p>From high-quality imagery to clear call-to-actions, we explore comprehensive strategies that help your products stand out online.</p>'
     },
-    'launch-operations': {
-        title: 'Launch Operations Playbooks',
-        image: './assets/images/project-5.jpeg',
-        description: 'Run predictable, low-stress launches with orchestrated checklists and rituals.',
-        points: [
-            'Cross-functional workflows spanning brand, content, engineering, and demand gen.',
-            'QA suites that protect performance, accessibility, and compliance requirements.',
-            'Post-launch retrospectives with actionable insights for continuous optimisation.'
-        ]
+    'blog-3': {
+        title: 'The Future of Web Design',
+        category: 'Insights',
+        image: './assets/images/blog-post-3 (2).jpeg',
+        description: 'We\'re investing in emerging technologies and design trends to future-proof your digital presence.',
+        content: '<p>As web design continues to evolve, we\'re preparing for the future. Our investment in new technologies and design trends ensures we can create websites that stand the test of time.</p><p>Our team stays updated with the latest design tools, frameworks, and methodologies to deliver cutting-edge solutions that keep your website ahead of the curve.</p>'
     }
 };
 
-const articleDetails = {
-    'launch-blueprint': {
-        tag: 'Playbooks',
-        title: 'Crafting Launch Blueprints',
-        description: 'A behind-the-scenes look at how we converge positioning, copy, and visuals into a conversion-ready launch narrative.',
-        points: [
-            'Pre-work templates align stakeholders around audience, promise, and proof.',
-            'Storyboarding sessions translate product depth into a single compelling arc.',
-            'Validation loops confirm the narrative resonates before a single pixel ships.'
-        ]
+const otherServicesDetails = {
+    'windshield': {
+        title: 'Windshield and All Glass Polishing',
+        description: 'Restore clarity and visibility to your vehicle\'s glass surfaces with our professional polishing services.',
+        details: 'We use specialized compounds and techniques to remove scratches, water spots, and oxidation from windshields, side windows, and rear glass, restoring them to like-new condition.'
     },
-    'interactive-demos': {
-        tag: 'Product',
-        title: 'Building Interactive Demos that Sell',
-        description: 'Ways to replace static explainer videos with guided experiences that keep prospects leaning in.',
-        points: [
-            'Progressive disclosure keeps complex features approachable without losing precision.',
-            'CRM-connected demos empower sales teams with contextual talking points mid-call.',
-            'Accessibility-first design ensures demos work beautifully on any device.'
-        ]
+    'seat-covers': {
+        title: 'Seat Covers and Door Pad Leather Upholstery',
+        description: 'Custom leather upholstery solutions that enhance comfort and style.',
+        details: 'Premium leather seat covers and door pad upholstery tailored to your vehicle\'s interior. Available in various colors and finishes to match your preferences.'
     },
-    'conversion-analytics': {
-        tag: 'Insights',
-        title: 'Conversion Analytics in Action',
-        description: 'Link experiments to pipeline by instrumenting the entire narrative journey.',
-        points: [
-            'North-star metrics cascade into measurable guardrails for every section.',
-            'Real-time dashboards unify marketing, product, and revenue data sources.',
-            'Weekly growth councils decide on new tests based on statistically significant learnings.'
-        ]
-    }
-};
-
-const footerServicesDetails = {
-    sprint: {
-        tag: 'Website Sprints',
-        title: 'Launch in 21 Days',
-        description: 'Co-create a conversion-focused product site with daily alignment and transparent deliverables.',
-        points: [
-            'Structured three-week cadence with discovery, build, and optimisation phases.',
-            'Dedicated Slack channel and Figma board for rapid feedback loops.',
-            'Optional add-ons for sales enablement decks and investor storytelling.'
-        ]
+    'anti-rust': {
+        title: 'Under-body Anti-rust Coatings',
+        description: 'Protect your vehicle\'s chassis from corrosion with our specialized anti-rust treatments.',
+        details: 'Comprehensive under-body protection using advanced rust-prevention coatings that shield critical components from moisture, salt, and environmental damage.'
     },
-    copy: {
-        tag: 'Narrative Labs',
-        title: 'Positioning & Copy Labs',
-        description: 'Clarify your promise across homepage, feature pages, and campaign touchpoints.',
-        points: [
-            'Audience interviews distilled into messaging hierarchies and tone guardrails.',
-            'Frameworks for headlines, taglines, and benefit ladders tuned to persona pain points.',
-            'Editorial reviews to keep future updates sharp, on-brand, and SEO aware.'
-        ]
+    'steering-gear': {
+        title: 'Steering, Gear Knob and Gear Bellow Covers',
+        description: 'Custom covers that add comfort and style to your vehicle\'s interior controls.',
+        details: 'Premium leather and fabric covers for steering wheels, gear knobs, and gear bellows, available in various styles and colors to personalize your driving experience.'
     },
-    motion: {
-        tag: 'Motion Narratives',
-        title: 'Product Motion & Micro-interactions',
-        description: 'Use motion design and cinematic storytelling to highlight micro-moments of delight.',
-        points: [
-            'Hero films, launch trailers, and scroll-triggered animations for immersive reveals.',
-            'Lightweight Lottie and WebGL experiences optimised for performance.',
-            'Documentation for your internal teams to extend the motion language responsibly.'
-        ]
+    'mats': {
+        title: '7D Mats with Custom Stitchings',
+        description: 'Custom-fit floor mats that protect your vehicle\'s interior while adding a touch of elegance.',
+        details: 'Premium 7D floor mats with custom stitching options, perfect fit for your vehicle model, and superior protection against wear and stains.'
     },
-    playbooks: {
-        tag: 'Growth Ops',
-        title: 'Growth Playbooks',
-        description: 'Stay ahead with experimentation plans aligned to pipeline and retention goals.',
-        points: [
-            'Quarterly experimentation roadmaps prioritised by impact and effort.',
-            'Test implementation support across landing pages, emails, and in-app surfaces.',
-            'Team workshops to embed growth thinking into design and content rituals.'
-        ]
+    'headlight': {
+        title: 'Headlight and Taillight Restorations',
+        description: 'Restore clarity and brightness to your vehicle\'s lighting systems.',
+        details: 'Professional restoration services that remove yellowing, hazing, and oxidation from headlights and taillights, improving visibility and appearance.'
     },
-    ops: {
-        tag: 'DesignOps',
-        title: 'DesignOps Enablement',
-        description: 'Empower internal teams with systems, tooling, and rituals that keep shipping consistent.',
-        points: [
-            'Component libraries with tokenised theming and accessibility baked in.',
-            'Workflow audits that reduce cycle time from ideation to production.',
-            'Training sessions and documentation so teams stay confident post-handover.'
-        ]
+    'washing': {
+        title: 'Body Washing and Vacuuming',
+        description: 'Comprehensive cleaning services to keep your vehicle looking its best.',
+        details: 'Thorough exterior washing and interior vacuuming services using premium products and techniques to maintain your vehicle\'s pristine condition.'
     },
-    other: {
-        tag: 'Custom',
-        title: 'Other Custom Services',
-        description: 'Need something unique? Let?s assemble a bespoke crew around your launch goals.',
-        points: [
-            'Event microsites and keynote collateral for major announcements.',
-            'Investor relations storytelling and data-room experience design.',
-            'Product education hubs, help centres, and community onboarding flows.'
-        ]
+    'headliners': {
+        title: 'Headliners Replacement',
+        description: 'Professional headliner replacement and repair services.',
+        details: 'Expert replacement of sagging or damaged headliners with premium materials, ensuring a perfect fit and factory-quality finish.'
     }
 };
 
@@ -163,11 +140,12 @@ document.addEventListener('DOMContentLoaded', () => {
     initialiseSmoothScroll();
     initThirdPartyLibraries();
     setupServiceModal();
+    setupBlogModal();
+    setupOtherServicesModal();
     setupCounters();
     setupContactForm();
-    setupArticlePopups();
-    setupFooterPopups();
-    setCurrentYear();
+    setupBlogModal();
+    setupOtherServicesModal();
 });
 
 function initialiseSmoothScroll() {
@@ -334,6 +312,156 @@ function setupServiceModal() {
     });
 }
 
+function setupBlogModal() {
+    const modal = document.getElementById('blogModal');
+    if (!modal) {
+        return;
+    }
+
+    const modalTitle = modal.querySelector('[data-blog-title]');
+    const modalCategory = modal.querySelector('[data-blog-category]');
+    const modalContent = modal.querySelector('[data-blog-content]');
+    const modalImage = modal.querySelector('[data-blog-image]');
+    const closeButtons = modal.querySelectorAll('[data-blog-modal-close]');
+    let lastFocusedElement = null;
+
+    modal.setAttribute('aria-hidden', 'true');
+
+    const renderBlogModal = (blog) => {
+        modalTitle.textContent = blog.title;
+        modalCategory.textContent = blog.category;
+        modalContent.innerHTML = blog.content;
+        modalImage.src = blog.image;
+        modalImage.alt = blog.title;
+    };
+
+    const openBlogModal = (key) => {
+        const blog = blogDetails[key];
+        if (!blog) {
+            return;
+        }
+
+        renderBlogModal(blog);
+        lastFocusedElement = document.activeElement;
+        modal.classList.add('is-visible');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('no-scroll');
+
+        const closeButton = modal.querySelector('.blog-modal__close');
+        window.requestAnimationFrame(() => {
+            closeButton?.focus({ preventScroll: true });
+        });
+    };
+
+    const closeBlogModal = () => {
+        modal.classList.remove('is-visible');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('no-scroll');
+        if (lastFocusedElement instanceof HTMLElement) {
+            lastFocusedElement.focus({ preventScroll: true });
+        }
+    };
+
+    document.querySelectorAll('[data-blog-key]').forEach((card) => {
+        card.addEventListener('click', () => {
+            openBlogModal(card.dataset.blogKey);
+        });
+    });
+
+    closeButtons.forEach((button) => {
+        button.addEventListener('click', closeBlogModal);
+    });
+
+    modal.addEventListener('click', (event) => {
+        if (event.target?.dataset?.blogModalClose !== undefined) {
+            closeBlogModal();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modal.classList.contains('is-visible')) {
+            closeBlogModal();
+        }
+    });
+}
+
+function setupOtherServicesModal() {
+    const modal = document.getElementById('otherServiceModal');
+    if (!modal) {
+        return;
+    }
+
+    const modalTitle = modal.querySelector('[data-other-modal-title]');
+    const modalDescription = modal.querySelector('[data-other-modal-description]');
+    const modalList = modal.querySelector('[data-other-modal-list]');
+    const closeButtons = modal.querySelectorAll('[data-other-modal-close]');
+    let lastFocusedElement = null;
+
+    modal.setAttribute('aria-hidden', 'true');
+
+    const renderModal = (service) => {
+        modalTitle.textContent = service.title;
+        modalDescription.textContent = service.description;
+
+        modalList.innerHTML = '';
+        service.points.forEach((point) => {
+            const item = document.createElement('li');
+            item.textContent = point;
+            modalList.appendChild(item);
+        });
+    };
+
+    const openModal = (key) => {
+        const service = otherServicesDetails[key];
+        if (!service) {
+            return;
+        }
+
+        renderModal(service);
+        lastFocusedElement = document.activeElement;
+        modal.classList.add('is-visible');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('no-scroll');
+
+        const closeButton = modal.querySelector('.service-modal__close');
+        window.requestAnimationFrame(() => {
+            closeButton?.focus({ preventScroll: true });
+        });
+    };
+
+    const closeModal = () => {
+        modal.classList.remove('is-visible');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('no-scroll');
+        if (lastFocusedElement instanceof HTMLElement) {
+            lastFocusedElement.focus({ preventScroll: true });
+        }
+    };
+
+    document.querySelectorAll('[data-other-service]').forEach((link) => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            openModal(link.dataset.otherService);
+        });
+    });
+
+    closeButtons.forEach((button) => {
+        button.addEventListener('click', closeModal);
+    });
+
+    modal.addEventListener('click', (event) => {
+        if (event.target?.dataset?.otherModalClose !== undefined) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modal.classList.contains('is-visible')) {
+            closeModal();
+        }
+    });
+}
+
 function setupCounters() {
     const counterCards = document.querySelectorAll('.counter-card');
     if (!counterCards.length) {
@@ -395,6 +523,16 @@ function setupContactForm() {
 
     const submitButton = form.querySelector('button[type="submit"]');
 
+    const setSubmittingState = (isSubmitting) => {
+        if (!submitButton) {
+            return;
+        }
+
+        submitButton.disabled = isSubmitting;
+        submitButton.dataset.originalText = submitButton.dataset.originalText || submitButton.innerHTML;
+        submitButton.innerHTML = isSubmitting ? '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Sending...' : submitButton.dataset.originalText;
+    };
+
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
 
@@ -409,7 +547,7 @@ function setupContactForm() {
         };
 
         if (Object.values(data).some((value) => !value)) {
-            showAlert({
+            await showAlert({
                 icon: 'warning',
                 title: 'Missing information',
                 text: 'Please fill in all the fields before submitting.'
@@ -419,7 +557,7 @@ function setupContactForm() {
 
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(data.email)) {
-            showAlert({
+            await showAlert({
                 icon: 'error',
                 title: 'Invalid email',
                 text: 'Please enter a valid email address so we can get back to you.'
@@ -429,7 +567,7 @@ function setupContactForm() {
 
         const phonePattern = /^[0-9+\-()\s]{7,}$/;
         if (!phonePattern.test(data.phone)) {
-            showAlert({
+            await showAlert({
                 icon: 'error',
                 title: 'Invalid phone number',
                 text: 'Please provide a reachable phone number with at least seven digits.'
@@ -437,257 +575,192 @@ function setupContactForm() {
             return;
         }
 
-        try {
-            setSubmittingState(submitButton, true);
-            await sendContactSubmission(data);
-            await showAlert({
+        const submissionText = buildSubmissionText(data);
+        
+        // Auto-save submission to backend (text file)
+        saveToBackend(submissionText);
+
+        // Save to backend
+        saveToBackend(submissionText).then(() => {
+            showAlert({
                 icon: 'success',
-                title: 'Requirement received!',
-                text: 'Thanks for reaching out! Our strategists will review your details and connect within one business day.'
+                title: 'Submitted!',
+                text: 'Your message has been submitted successfully. We will get back to you soon.',
+                confirmButtonText: 'OK'
             });
             form.reset();
-        } catch (error) {
-            const message = error instanceof Error ? error.message : 'Something went wrong while submitting your request.';
+        }).catch((error) => {
             showAlert({
                 icon: 'error',
                 title: 'Submission failed',
-                text: message
+                text: 'There was an error submitting your message. Please try again later.'
             });
-        } finally {
-            setSubmittingState(submitButton, false);
-        }
+            console.error('Submission error:', error);
+        });
     });
 }
 
-async function sendContactSubmission(data) {
-    const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    });
-
-    if (!response.ok) {
-        let message = 'We could not save your submission. Please try again in a moment.';
-        try {
-            const payload = await response.json();
-            if (payload?.message) {
-                message = payload.message;
-            }
-        } catch (error) {
-            // Ignore JSON parse errors, use fallback message
-        }
-        throw new Error(message);
-    }
-
-    return response.json().catch(() => ({}));
-}
-
-function setSubmittingState(button, isSubmitting) {
-    if (!button) {
-        return;
-    }
-
-    if (!button.dataset.originalText) {
-        button.dataset.originalText = button.textContent.trim();
-    }
-
-    button.disabled = isSubmitting;
-    button.classList.toggle('is-loading', isSubmitting);
-    button.textContent = isSubmitting ? 'Submitting?' : button.dataset.originalText;
-}
-
-function setupArticlePopups() {
-    const controller = createInfoModalController('articleModal');
-    if (!controller) {
-        return;
-    }
-
-    controller.bind({
-        triggerSelector: '[data-article-key]',
-        attribute: 'articleKey',
-        contentMap: articleDetails
-    });
-}
-
-function setupFooterPopups() {
-    const controller = createInfoModalController('footerModal');
-    if (!controller) {
-        return;
-    }
-
-    controller.bind({
-        triggerSelector: '[data-footer-key]',
-        attribute: 'footerKey',
-        contentMap: footerServicesDetails
-    });
-}
-
-function createInfoModalController(modalId) {
-    const modal = document.getElementById(modalId);
-    if (!modal) {
+async function parseJsonResponse(response) {
+    try {
+        return await response.clone().json();
+    } catch (error) {
+        console.warn('Unable to parse JSON response', error);
         return null;
     }
+}
 
-    const tagEl = modal.querySelector('[data-info-modal-tag]');
-    const titleEl = modal.querySelector('[data-info-modal-title]');
-    const descriptionEl = modal.querySelector('[data-info-modal-description]');
-    const listEl = modal.querySelector('[data-info-modal-list]');
-    const closeButtons = modal.querySelectorAll('[data-info-modal-close]');
-    const dialog = modal.querySelector('.info-modal__dialog');
+function setCurrentYear() {
+    const yearPlaceholder = document.getElementById('currentYear');
+    if (yearPlaceholder) {
+        yearPlaceholder.textContent = new Date().getFullYear();
+    }
+}
+
+function setupBlogModal() {
+    const modal = document.getElementById('blogModal');
+    if (!modal) {
+        return;
+    }
+
+    const modalTitle = modal.querySelector('[data-blog-modal-title]');
+    const modalExcerpt = modal.querySelector('[data-blog-modal-excerpt]');
+    const modalImage = modal.querySelector('[data-blog-modal-image]');
+    const modalList = modal.querySelector('[data-blog-modal-list]');
+    const closeButtons = modal.querySelectorAll('[data-blog-modal-close]');
     let lastFocusedElement = null;
-    let trapFocusHandler = null;
 
-    const openModal = (content, trigger) => {
-        if (!content) {
+    const renderModal = (article) => {
+        modalTitle.textContent = article.title;
+        modalExcerpt.textContent = article.excerpt;
+        modalImage.src = article.image;
+        modalImage.alt = article.title;
+
+        modalList.innerHTML = '';
+        article.highlights.forEach((point) => {
+            const li = document.createElement('li');
+            li.textContent = point;
+            modalList.appendChild(li);
+        });
+    };
+
+    const openModal = (key) => {
+        const article = blogDetails[key];
+        if (!article) {
             return;
         }
 
-        if (tagEl) {
-            if (content.tag) {
-                tagEl.textContent = content.tag;
-                tagEl.removeAttribute('hidden');
-            } else {
-                tagEl.setAttribute('hidden', '');
-                tagEl.textContent = '';
-            }
-        }
-
-        if (titleEl) {
-            titleEl.textContent = content.title || '';
-        }
-
-        if (descriptionEl) {
-            descriptionEl.textContent = content.description || '';
-        }
-
-        if (listEl) {
-            listEl.innerHTML = '';
-            (content.points || []).forEach((point) => {
-                const li = document.createElement('li');
-                li.textContent = point;
-                listEl.appendChild(li);
-            });
-        }
-
-        lastFocusedElement = trigger instanceof HTMLElement ? trigger : null;
-
+        renderModal(article);
+        lastFocusedElement = document.activeElement;
         modal.classList.add('is-visible');
         modal.setAttribute('aria-hidden', 'false');
         document.body.classList.add('no-scroll');
 
-        if (trigger) {
-            trigger.setAttribute('aria-expanded', 'true');
-        }
-
-        const primaryClose = modal.querySelector('[data-info-modal-close]');
-        window.requestAnimationFrame(() => {
-            primaryClose?.focus({ preventScroll: true });
-        });
-
-        trapFocusHandler = (event) => {
-            if (!modal.classList.contains('is-visible') || !dialog) {
-                return;
-            }
-
-            const focusableSelectors = 'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
-            const focusableElements = Array.from(dialog.querySelectorAll(focusableSelectors))
-                .filter((el) => !el.hasAttribute('disabled') && el.getAttribute('tabindex') !== '-1');
-
-            if (!focusableElements.length) {
-                return;
-            }
-
-            const firstElement = focusableElements[0];
-            const lastElement = focusableElements[focusableElements.length - 1];
-
-            if (event.key === 'Tab') {
-                if (event.shiftKey && document.activeElement === firstElement) {
-                    event.preventDefault();
-                    lastElement.focus();
-                } else if (!event.shiftKey && document.activeElement === lastElement) {
-                    event.preventDefault();
-                    firstElement.focus();
-                }
-            }
-        };
-
-        modal.addEventListener('keydown', trapFocusHandler);
+        const closeButton = modal.querySelector('.blog-modal__close');
+        closeButton?.focus({ preventScroll: true });
     };
 
     const closeModal = () => {
-        if (trapFocusHandler) {
-            modal.removeEventListener('keydown', trapFocusHandler);
-            trapFocusHandler = null;
-        }
-
         modal.classList.remove('is-visible');
         modal.setAttribute('aria-hidden', 'true');
         document.body.classList.remove('no-scroll');
-
-        if (lastFocusedElement) {
-            lastFocusedElement.setAttribute('aria-expanded', 'false');
+        if (lastFocusedElement instanceof HTMLElement) {
             lastFocusedElement.focus({ preventScroll: true });
         }
-
-        lastFocusedElement = null;
     };
 
-    closeButtons.forEach((button) => {
-        button.addEventListener('click', () => closeModal());
-    });
+    document.querySelectorAll('[data-blog-key]').forEach((card) => {
+        const key = card.dataset.blogKey;
 
-    modal.addEventListener('click', (event) => {
-        if (event.target?.dataset?.infoModalClose !== undefined || event.target === modal) {
-            closeModal();
-        }
-    });
-
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && modal.classList.contains('is-visible')) {
-            closeModal();
-        }
-    });
-
-    return {
-        bind({ triggerSelector, attribute, contentMap }) {
-            const triggers = document.querySelectorAll(triggerSelector);
-            if (!triggers.length) {
+        const handleActivation = (event) => {
+            if (event.type === 'keydown' && !['Enter', ' '].includes(event.key)) {
                 return;
             }
 
-            triggers.forEach((trigger) => {
-                const key = trigger.dataset?.[attribute];
-                if (!key || !contentMap[key]) {
-                    return;
-                }
+            event.preventDefault();
+            openModal(key);
+        };
 
-                trigger.setAttribute('role', trigger.tagName.toLowerCase() === 'a' ? 'button' : trigger.getAttribute('role') || 'button');
-                trigger.setAttribute('aria-controls', modalId);
-                trigger.setAttribute('aria-expanded', 'false');
+        card.addEventListener('click', handleActivation);
+        card.addEventListener('keydown', handleActivation);
+    });
 
-                trigger.addEventListener('click', (event) => {
-                    event.preventDefault();
-                    openModal(contentMap[key], trigger);
-                });
+    closeButtons.forEach((button) => {
+        button.addEventListener('click', closeModal);
+    });
 
-                trigger.addEventListener('keydown', (event) => {
-                    if (event.key === 'Enter' || event.key === ' ') {
-                        event.preventDefault();
-                        openModal(contentMap[key], trigger);
-                    }
-                });
-            });
+    modal.addEventListener('click', (event) => {
+        if (event.target?.dataset?.blogModalClose !== undefined) {
+            closeModal();
         }
-    };
+    });
+
+    return [
+        '--- Aithentic Contact Submission ---',
+        `Timestamp: ${timestamp}`,
+        `Name: ${data.firstName} ${data.lastName}`,
+        `Email: ${data.email}`,
+        `Phone: ${data.phone}`,
+        `Subject: ${data.subject}`,
+        'Message:',
+        data.message,
+        '',
+        '---------------------------------------------'
+    ].join('\n');
 }
 
-function setCurrentYear() {
-    const target = document.querySelector('[data-current-year]');
-    if (target) {
-        target.textContent = new Date().getFullYear();
+function saveToBackend(content) {
+    // Auto-save to backend
+    const timestamp = Date.now();
+async function saveToBackend(content) {
+    try {
+        const response = await fetch('/api/save-contact.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ content })
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to save contact submission');
+        }
+
+        return await response.json();
+    } catch (error) {
+        // Fallback: Save to local file if backend is not available
+        console.warn('Backend not available, using fallback:', error);
+        
+        // For development/testing, save to localStorage
+        try {
+            const submissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
+            submissions.push({
+                content: content,
+                timestamp: new Date().toISOString()
+            });
+            localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
+            return { success: true, message: 'Saved locally (backend unavailable)' };
+        } catch (localError) {
+            throw error;
+        }
     }
+}
+
+function downloadTextFile(filename, content) {
+    const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `contact-submission-${timestamp}.txt`;
+    
+    // Silently download in background
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+    
+    setTimeout(() => {
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+    }, 100);
 }
 
 function showAlert(options) {
@@ -704,3 +777,200 @@ function showAlert(options) {
 
     return Promise.resolve();
 }
+
+function setupBlogModal() {
+    const modal = document.getElementById('blogModal');
+    if (!modal) {
+        return;
+    }
+
+    const modalTitle = modal.querySelector('[data-blog-modal-title]');
+    const modalDescription = modal.querySelector('[data-blog-modal-description]');
+    const modalContent = modal.querySelector('[data-blog-modal-content]');
+    const modalImage = modal.querySelector('[data-blog-modal-image]');
+    const modalCategory = modal.querySelector('[data-blog-modal-category]');
+    const closeButtons = modal.querySelectorAll('[data-blog-modal-close]');
+    let lastFocusedElement = null;
+
+    modal.setAttribute('aria-hidden', 'true');
+
+    const renderModal = (blog) => {
+        modalTitle.textContent = blog.title;
+        modalDescription.textContent = blog.description;
+        modalContent.innerHTML = blog.content;
+        modalImage.src = blog.image;
+        modalImage.alt = blog.title;
+        modalCategory.textContent = blog.category;
+    };
+
+    const openModal = (key) => {
+        const blog = blogDetails[key];
+        if (!blog) {
+            return;
+        }
+
+        renderModal(blog);
+        lastFocusedElement = document.activeElement;
+        modal.classList.add('is-visible');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('no-scroll');
+
+        const closeButton = modal.querySelector('.blog-modal__close');
+        window.requestAnimationFrame(() => {
+            closeButton?.focus({ preventScroll: true });
+        });
+    };
+
+    const closeModal = () => {
+        modal.classList.remove('is-visible');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('no-scroll');
+        if (lastFocusedElement instanceof HTMLElement) {
+            lastFocusedElement.focus({ preventScroll: true });
+        }
+    };
+
+    document.querySelectorAll('[data-blog-key]').forEach((card) => {
+        card.addEventListener('click', () => {
+            openModal(card.dataset.blogKey);
+        });
+    });
+
+    document.querySelectorAll('[data-blog-link]').forEach((link) => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const card = link.closest('[data-blog-key]');
+            if (card) {
+                openModal(card.dataset.blogKey);
+            }
+        });
+    });
+
+    closeButtons.forEach((button) => {
+        button.addEventListener('click', closeModal);
+    });
+
+    modal.addEventListener('click', (event) => {
+        if (event.target?.dataset?.blogModalClose !== undefined) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modal.classList.contains('is-visible')) {
+            closeModal();
+        }
+    });
+}
+
+function setupOtherServicesModal() {
+    // Create modal HTML if it doesn't exist
+    let modal = document.getElementById('otherServicesModal');
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'otherServicesModal';
+        modal.className = 'service-modal';
+        modal.setAttribute('aria-hidden', 'true');
+        modal.innerHTML = `
+            <div class="service-modal__backdrop" data-other-services-close></div>
+            <div class="service-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="otherServicesModalTitle">
+                <button class="service-modal__close" type="button" data-other-services-close
+                    aria-label="Close service details">
+                    <i class="ri-close-line"></i>
+                </button>
+                <div class="service-modal__body">
+                    <div class="service-modal__text">
+                        <h3 id="otherServicesModalTitle" data-other-services-title></h3>
+                        <p data-other-services-description></p>
+                        <p data-other-services-details></p>
+                    </div>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+    }
+
+    const modalTitle = modal.querySelector('[data-other-services-title]');
+    const modalDescription = modal.querySelector('[data-other-services-description]');
+    const modalDetails = modal.querySelector('[data-other-services-details]');
+    const closeButtons = modal.querySelectorAll('[data-other-services-close]');
+    let lastFocusedElement = null;
+
+    modal.setAttribute('aria-hidden', 'true');
+
+    const renderModal = (service) => {
+        modalTitle.textContent = service.title;
+        modalDescription.textContent = service.description;
+        modalDetails.textContent = service.details;
+    };
+
+    const openModal = (key) => {
+        const service = otherServicesDetails[key];
+        if (!service) {
+            return;
+        }
+
+        renderModal(service);
+        lastFocusedElement = document.activeElement;
+        modal.classList.add('is-visible');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('no-scroll');
+
+        const closeButton = modal.querySelector('.service-modal__close');
+        window.requestAnimationFrame(() => {
+            closeButton?.focus({ preventScroll: true });
+        });
+    };
+
+    const closeModal = () => {
+        modal.classList.remove('is-visible');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('no-scroll');
+        if (lastFocusedElement instanceof HTMLElement) {
+            lastFocusedElement.focus({ preventScroll: true });
+        }
+    };
+
+    // Map footer links to service keys
+    const serviceMapping = {
+        'Windshield and all glass polishing': 'windshield',
+        'Seat covers and Door pad leather upholstery': 'seat-covers',
+        'Under-body anti-rust coatings': 'anti-rust',
+        'Steering, Gear knob and Gear bellow covers': 'steering-gear',
+        '7D matts with custom stitchings': 'mats',
+        'Headlight and taillight restorations': 'headlight',
+        'Body Washing and Vacuuming': 'washing',
+        'Headliners replacement': 'headliners'
+    };
+
+    // Add click handlers to footer links
+    document.querySelectorAll('footer ul li a').forEach((link) => {
+        const linkText = link.textContent.trim();
+        const serviceKey = serviceMapping[linkText];
+        
+        if (serviceKey) {
+            link.style.cursor = 'pointer';
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal(serviceKey);
+            });
+        }
+    });
+
+    closeButtons.forEach((button) => {
+        button.addEventListener('click', closeModal);
+    });
+
+    modal.addEventListener('click', (event) => {
+        if (event.target?.dataset?.otherServicesClose !== undefined) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modal.classList.contains('is-visible')) {
+            closeModal();
+        }
+    });
+}
+

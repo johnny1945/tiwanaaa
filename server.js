@@ -1,85 +1,82 @@
 const express = require('express');
 const path = require('path');
-const fs = require('fs');
-const fsPromises = require('fs/promises');
+const fs = require('fs/promises');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const ROOT_DIR = __dirname;
-const DATA_DIR = path.join(ROOT_DIR, 'data');
-const SUBMISSION_FILE = path.join(DATA_DIR, 'contact-submissions.txt');
+const DATA_DIR = path.join(__dirname, 'data');
+const CONTACT_FILE = path.join(DATA_DIR, 'contact-submissions.txt');
 
 app.use(express.json({ limit: '1mb' }));
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static(ROOT_DIR));
 
-const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const phonePattern = /^[0-9+\-()\s]{7,}$/;
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-app.post('/api/contact', async (req, res) => {
-    const {
-        firstName = '',
-        lastName = '',
-        email = '',
-        phone = '',
-        subject = '',
-        message = ''
-    } = req.body || {};
-
-    const fields = { firstName, lastName, email, phone, subject, message };
-    const missingFields = Object.entries(fields)
-        .filter(([, value]) => typeof value !== 'string' || !value.trim())
-        .map(([key]) => key);
-
-    if (missingFields.length) {
-        return res.status(400).json({ message: 'Please fill out all required fields before submitting.' });
+    if (req.method === 'OPTIONS') {
+        return res.sendStatus(204);
     }
 
-    if (!emailPattern.test(email.trim())) {
-        return res.status(400).json({ message: 'Please provide a valid email address.' });
-    }
-
-    if (!phonePattern.test(phone.trim())) {
-        return res.status(400).json({ message: 'Please provide a valid phone number with at least seven digits.' });
-    }
-
-    const sanitized = Object.fromEntries(
-        Object.entries(fields).map(([key, value]) => [key, value.trim()])
-    );
-
-    const timestamp = new Date();
-    const submissionBlock = [
-        '--- Aithentic contact submission ---',
-        `Timestamp: ${timestamp.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}`,
-        `First name: ${sanitized.firstName}`,
-        `Last name: ${sanitized.lastName}`,
-        `Email: ${sanitized.email}`,
-        `Phone: ${sanitized.phone}`,
-        `Subject: ${sanitized.subject}`,
-        'Message:',
-        sanitized.message,
-        '---------------------------------------------',
-        ''
-    ].join('\n');
-
-    try {
-        if (!fs.existsSync(DATA_DIR)) {
-            await fsPromises.mkdir(DATA_DIR, { recursive: true });
-        }
-
-        await fsPromises.appendFile(SUBMISSION_FILE, submissionBlock, 'utf8');
-    } catch (error) {
-        console.error('Failed to write submission:', error);
-        return res.status(500).json({ message: 'Unable to store your submission at the moment. Please try again later.' });
-    }
-
-    return res.status(201).json({ message: 'Submission stored successfully.' });
+    next();
 });
 
+app.post('/api/contact', async (req, res) => {
+    try {
+        const {
+            firstName = '',
+            lastName = '',
+            email = '',
+            phone = '',
+            subject = '',
+            message = ''
+        } = req.body || {};
+
+        const values = [firstName, lastName, email, phone, subject, message].map((value) => String(value).trim());
+        if (values.some((value) => !value)) {
+            return res.status(400).json({
+                message: 'Please provide first name, last name, email, phone, subject, and message.'
+            });
+        }
+
+        const [trimmedFirstName, trimmedLastName, trimmedEmail, trimmedPhone, trimmedSubject, trimmedMessage] = values;
+
+        await fs.mkdir(DATA_DIR, { recursive: true });
+
+        const timestamp = new Date().toISOString();
+        const entry = [
+            '--- Aithentic contact submission ---',
+            `Timestamp: ${timestamp}`,
+            `Name: ${[trimmedFirstName, trimmedLastName].filter(Boolean).join(' ')}`.trim(),
+            `Email: ${trimmedEmail}`,
+            `Phone: ${trimmedPhone}`,
+            `Subject: ${trimmedSubject}`,
+            'Message:',
+            trimmedMessage,
+            '-------------------------------------',
+            ''
+        ].join('\n');
+
+        await fs.appendFile(CONTACT_FILE, entry, { encoding: 'utf8' });
+
+        return res.status(201).json({
+            message: 'Thanks for reaching out! Your details are on our radar and we will get back to you shortly.'
+        });
+    } catch (error) {
+        console.error('Failed to store contact submission', error);
+        return res.status(500).json({
+            message: 'We were unable to save your message. Please try again later.'
+        });
+    }
+});
+
+app.use(express.static(__dirname));
+
 app.get('*', (req, res) => {
-    res.sendFile(path.join(ROOT_DIR, 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(PORT, () => {
-    console.log(`Aithentic server listening on http://localhost:${PORT}`);
+    console.log(`Aithentic site running at http://localhost:${PORT}`);
 });
+

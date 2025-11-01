@@ -1,7 +1,7 @@
 {
   "name": "aithentic-site",
   "version": "1.0.0",
-  "description": "Aithentic product showcase website",
+  "description": "Marketing site and API endpoint for Aithentic product showcase",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -11,6 +11,6 @@
     "express": "^4.19.2"
   },
   "devDependencies": {
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.4"
   }
 }

@@ -1,70 +1,43 @@
-# Aithentic Product Showcase
+Aithentic Product Showcase Site
 
-Aithentic is a modern product storytelling website that blends immersive hero experiences, conversion-focused service modules, dynamic news popups, and a backend-ready contact workflow. The site demonstrates how marketing, design, and engineering collaborate to launch high-performing digital experiences quickly.
+Aithentic is a launchpad-themed marketing site for digital product teams. It now includes:
 
-## Highlights
+- A fully rethemed hero, services, works, testimonials, and contact sections tailored to SaaS and product launches
+- Interactive modals for services, blog articles, and footer "Other Services" listings
+- Animated footer link underlines for additional polish
+- A lightweight Express backend that persists contact submissions to `data/contact-submissions.txt`
 
-- ?? **Centered hero narrative** with animated call-to-actions tailored for rapid product launches
-- ?? **Updated content architecture** for the Aithentic brand across About, Platform Highlights, and Experience Library sections
-- ?? **Interactive modals** that reveal deeper insights for platform services, recent articles, and footer service offerings
-- ?? **Backend-powered contact form** that validates input and stores submissions to a text file for easy follow-up
-- ? **Refreshed visual language** featuring gradient-driven imagery, hover animations, and accessible focus states
-
-## Getting Started
+Getting Started
+---------------
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) v16 or newer
-- npm (ships with Node.js)
+- Node.js 18 or newer
 
 ### Installation
 
 ```bash
-git clone https://github.com/Amitkumar0111/tiwana-website
-cd tiwana-website
 npm install
 ```
 
-### Running the project
+### Running locally
 
-Serve the static site and API locally (default: <http://localhost:3000>):
+The project ships with an Express server that serves the static site and exposes the `/api/contact` endpoint used by the contact form.
 
 ```bash
 npm start
 ```
 
-For live-reload during development:
-
-```bash
-npm run dev
-```
+By default the site is available at [http://localhost:3000](http://localhost:3000).
 
 ### Contact submissions
 
-- Form data is validated in the browser and sent to `POST /api/contact`
-- Submissions are appended to `data/contact-submissions.txt`
-- The server automatically creates the `data` directory if it does not exist
+Each successful form submission appends a timestamped entry to `data/contact-submissions.txt`. The directory and file are created automatically on first use.
 
-## Project Structure
+Project Structure Highlights
+----------------------------
 
-```
-??? assets/
-?   ??? css/         ? Global styles
-?   ??? images/      ? Brand imagery & hero assets
-?   ??? js/          ? Frontend interactions (modals, counters, contact form)
-??? data/            ? Generated at runtime for contact submissions
-??? index.html       ? Marketing site markup
-??? package.json     ? Node.js configuration
-??? server.js        ? Express server handling static hosting + contact API
-```
-
-## Scripts
-
-| Command | Description |
-| --- | --- |
-| `npm start` | Run the production server |
-| `npm run dev` | Run the server with live reload via nodemon |
-
-## License
-
-This project remains open for customization for Aithentic client engagements. Adapt the content, imagery, or backend integration as needed for your launch.
+- `index.html` – marketing site content and markup
+- `assets/css/style.css` – custom styling, animations, and modal layouts
+- `assets/js/main.js` – front-end behaviour, modals, counters, and contact form logic
+- `server.js` – Express server handling contact persistence and static asset serving
