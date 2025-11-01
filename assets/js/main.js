@@ -520,7 +520,19 @@ function setupContactForm() {
         return;
     }
 
-    form.addEventListener('submit', (event) => {
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    const setSubmittingState = (isSubmitting) => {
+        if (!submitButton) {
+            return;
+        }
+
+        submitButton.disabled = isSubmitting;
+        submitButton.dataset.originalText = submitButton.dataset.originalText || submitButton.innerHTML;
+        submitButton.innerHTML = isSubmitting ? '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Sending...' : submitButton.dataset.originalText;
+    };
+
+    form.addEventListener('submit', async (event) => {
         event.preventDefault();
 
         const formData = new FormData(form);
@@ -534,7 +546,7 @@ function setupContactForm() {
         };
 
         if (Object.values(data).some((value) => !value)) {
-            showAlert({
+            await showAlert({
                 icon: 'warning',
                 title: 'Missing information',
                 text: 'Please fill in all the fields before submitting.'
@@ -544,7 +556,7 @@ function setupContactForm() {
 
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(data.email)) {
-            showAlert({
+            await showAlert({
                 icon: 'error',
                 title: 'Invalid email',
                 text: 'Please enter a valid email address so we can get back to you.'
@@ -554,7 +566,7 @@ function setupContactForm() {
 
         const phonePattern = /^[0-9+\-()\s]{7,}$/;
         if (!phonePattern.test(data.phone)) {
-            showAlert({
+            await showAlert({
                 icon: 'error',
                 title: 'Invalid phone number',
                 text: 'Please provide a reachable phone number with at least seven digits.'
@@ -587,9 +599,98 @@ function setupContactForm() {
     });
 }
 
-function buildSubmissionText(data) {
-    const timestamp = new Date().toLocaleString('en-IN', {
-        timeZone: 'Asia/Kolkata'
+async function parseJsonResponse(response) {
+    try {
+        return await response.clone().json();
+    } catch (error) {
+        console.warn('Unable to parse JSON response', error);
+        return null;
+    }
+}
+
+function setCurrentYear() {
+    const yearPlaceholder = document.getElementById('currentYear');
+    if (yearPlaceholder) {
+        yearPlaceholder.textContent = new Date().getFullYear();
+    }
+}
+
+function setupBlogModal() {
+    const modal = document.getElementById('blogModal');
+    if (!modal) {
+        return;
+    }
+
+    const modalTitle = modal.querySelector('[data-blog-modal-title]');
+    const modalExcerpt = modal.querySelector('[data-blog-modal-excerpt]');
+    const modalImage = modal.querySelector('[data-blog-modal-image]');
+    const modalList = modal.querySelector('[data-blog-modal-list]');
+    const closeButtons = modal.querySelectorAll('[data-blog-modal-close]');
+    let lastFocusedElement = null;
+
+    const renderModal = (article) => {
+        modalTitle.textContent = article.title;
+        modalExcerpt.textContent = article.excerpt;
+        modalImage.src = article.image;
+        modalImage.alt = article.title;
+
+        modalList.innerHTML = '';
+        article.highlights.forEach((point) => {
+            const li = document.createElement('li');
+            li.textContent = point;
+            modalList.appendChild(li);
+        });
+    };
+
+    const openModal = (key) => {
+        const article = blogDetails[key];
+        if (!article) {
+            return;
+        }
+
+        renderModal(article);
+        lastFocusedElement = document.activeElement;
+        modal.classList.add('is-visible');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('no-scroll');
+
+        const closeButton = modal.querySelector('.blog-modal__close');
+        closeButton?.focus({ preventScroll: true });
+    };
+
+    const closeModal = () => {
+        modal.classList.remove('is-visible');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('no-scroll');
+        if (lastFocusedElement instanceof HTMLElement) {
+            lastFocusedElement.focus({ preventScroll: true });
+        }
+    };
+
+    document.querySelectorAll('[data-blog-key]').forEach((card) => {
+        const key = card.dataset.blogKey;
+
+        const handleActivation = (event) => {
+            if (event.type === 'keydown' && !['Enter', ' '].includes(event.key)) {
+                return;
+            }
+
+            event.preventDefault();
+            openModal(key);
+        };
+
+        card.addEventListener('click', handleActivation);
+        card.addEventListener('keydown', handleActivation);
+    });
+
+    closeButtons.forEach((button) => {
+        button.addEventListener('click', closeModal);
+    });
+
+    modal.addEventListener('click', (event) => {
+        if (event.target?.dataset?.blogModalClose !== undefined) {
+            closeModal();
+        }
     });
 
     return [
