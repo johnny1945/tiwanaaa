@@ -206,16 +206,17 @@ function initThirdPartyLibraries() {
             gsap.registerPlugin(ScrollTrigger);
         }
 
-        gsap.set('[data-hero-title], [data-hero-subtitle], [data-hero-cta] a', {
+        gsap.set('[data-hero-kicker], [data-hero-title], [data-hero-subtitle], [data-hero-cta] a', {
             opacity: 0,
             y: 60
         });
 
         const heroTimeline = gsap.timeline({ defaults: { ease: 'power3.out', duration: 1 } });
         heroTimeline
-            .to('[data-hero-title]', { opacity: 1, y: 0 })
-            .to('[data-hero-subtitle]', { opacity: 1, y: 0 }, '-=0.65')
-            .to('[data-hero-cta] a', { opacity: 1, y: 0, stagger: 0.12 }, '-=0.55');
+            .to('[data-hero-kicker]', { opacity: 1, y: 0 })
+            .to('[data-hero-title]', { opacity: 1, y: 0 }, '-=0.75')
+            .to('[data-hero-subtitle]', { opacity: 1, y: 0 }, '-=0.6')
+            .to('[data-hero-cta] a', { opacity: 1, y: 0, stagger: 0.12 }, '-=0.5');
 
         gsap.utils.toArray('.service-card, .contact-card').forEach((card) => {
             gsap.from(card, {
@@ -765,7 +766,7 @@ function downloadTextFile(filename, content) {
 function showAlert(options) {
     if (typeof Swal !== 'undefined') {
         return Swal.fire({
-            confirmButtonColor: '#44d125',
+            confirmButtonColor: '#7C3AED',
             ...options
         });
     }

@@ -1,5 +1,4 @@
 Aithentic Product Showcase Site
-================================
 
 Aithentic is a launchpad-themed marketing site for digital product teams. It now includes:
 
