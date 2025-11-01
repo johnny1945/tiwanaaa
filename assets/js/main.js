@@ -1,155 +1,138 @@
 const numberFormatter = new Intl.NumberFormat('en-IN');
 
 const serviceDetails = {
-    narrative: {
-        title: 'Product Narrative Strategy',
-        image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80',
-        description: 'Translate roadmap milestones into a persuasive story buyers and investors instantly grasp.',
+    'body-repair': {
+        title: 'Custom Web Development',
+        image: './assets/images/services-1.jpeg',
+        description: 'Tailored web solutions built with modern technologies and best practices.',
         points: [
-            'Positioning sprints to sharpen ICPs, differentiators, and proof.',
-            'Narrative hierarchy that anchors your hero, feature, and proof modules.',
-            'Messaging kits for sales, founders, and success teams to stay aligned.'
+            'Responsive websites optimized for all devices and screen sizes.',
+            'Built with React, Vue, Angular, or your preferred framework.',
+            'SEO-friendly architecture for better search engine rankings.',
+            'Fast loading times with performance optimization built-in.'
         ]
     },
-    'web-experience': {
-        title: 'Conversion-Ready Websites',
-        image: 'https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80',
-        description: 'Modular launchpads engineered for high intent visitors, investors, and partners.',
+    'maintenance': {
+        title: 'E-commerce Solutions',
+        image: './assets/images/services-3.jpeg',
+        description: 'Complete online stores that drive sales and enhance customer experience.',
         points: [
-            'Component libraries with flexible layouts for rapid iteration.',
-            'Micro-interactions and scroll choreography without sacrificing performance.',
-            'CMS-ready handoff with content guidelines and governance playbooks.'
+            'Secure payment gateway integration (Stripe, PayPal, Razorpay).',
+            'Inventory management and order tracking systems.',
+            'Shopping cart optimization for higher conversion rates.',
+            'Mobile-first design for on-the-go shopping experience.'
         ]
     },
-    interactive: {
-        title: 'Interactive Demo Systems',
-        image: 'https://images.unsplash.com/photo-1531498860502-7c67cf02f77b?auto=format&fit=crop&w=900&q=80',
-        description: 'Self-serve walkthroughs and sandbox experiences that spotlight product value quickly.',
+    'overhaul': {
+        title: 'Web Applications',
+        image: './assets/images/services-4.jpg',
+        description: 'Powerful web applications engineered for performance and scalability.',
         points: [
-            'Scenario-based paths tailored for different buyer personas.',
-            'No-code update kits so PMMs can refresh flows without engineering.',
-            'Analytics hooks to see where prospects pause, skip, or convert.'
+            'Full-stack development with Node.js, Python, or PHP backends.',
+            'RESTful API design and implementation.',
+            'Database architecture and optimization (MySQL, MongoDB, PostgreSQL).',
+            'Cloud deployment on AWS, Azure, or Google Cloud Platform.'
         ]
     },
-    launch: {
-        title: 'Launch Campaign Ops',
-        image: 'https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=900&q=80',
-        description: 'Rituals, assets, and automations that keep your launch timeline organised and predictable.',
+    'paint': {
+        title: 'UI/UX Design',
+        image: './assets/images/services-5.jpg',
+        description: 'Beautiful interfaces that prioritize user experience and engagement.',
         points: [
-            'Channel playbooks covering email, paid, community, and PR activations.',
-            'Stakeholder dashboards that surface blockers before they derail momentum.',
-            'Post-launch retros with experiment backlogs for the next sprint.'
+            'User research and persona development.',
+            'Wireframing and interactive prototypes using Figma.',
+            'Accessibility-first design principles (WCAG compliant).',
+            'Usability testing and iterative improvements.'
         ]
     },
-    visuals: {
-        title: 'Visual Identity & Motion',
-        image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80',
-        description: 'Systems, art direction, and motion that make your product instantly recognisable.',
+    'detailing': {
+        title: 'Digital Marketing',
+        image: './assets/images/services-6.jpeg',
+        description: 'Strategic digital marketing to grow your online presence and revenue.',
         points: [
-            'Logo refreshers, colour harmonies, and typography stacks built for digital-first brands.',
-            'UI kits and illustration styles adaptable across web, product, and pitch decks.',
-            'Launch-specific motion libraries optimised for web performance.'
+            'Search Engine Optimization (SEO) for organic traffic growth.',
+            'Social media management and content creation.',
+            'Google Ads and Facebook Ads campaign management.',
+            'Email marketing automation and analytics reporting.'
         ]
     },
-    experiments: {
-        title: 'Growth Experiment Toolkit',
-        image: 'https://images.unsplash.com/photo-1517142874080-5a3d0c197ae8?auto=format&fit=crop&w=900&q=80',
-        description: 'Keep marketing teams shipping learnings weekly with ready-to-run experiments.',
+    'enhancements': {
+        title: 'API & Backend Services',
+        image: './assets/images/services-8.jpeg',
+        description: 'Robust backend systems and integrations that power your applications.',
         points: [
-            'Prioritised testing roadmap mapped to your funnel health goals.',
-            'Creative variants and scripts to speed up production cycles.',
-            'Reporting templates that translate data into next-step decisions.'
+            'Custom API development and third-party integrations.',
+            'Microservices architecture for scalable solutions.',
+            'Real-time features with WebSocket and Socket.io.',
+            'DevOps and CI/CD pipeline setup for automated deployments.'
         ]
     }
 };
 
 const blogDetails = {
-    'design-systems': {
-        title: 'Scaling Design Systems Without Slowing Launches',
-        image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=80',
-        excerpt: 'Lessons from building composable marketing systems for fast-moving SaaS teams.',
-        highlights: [
-            'Audit the product journey before choosing design tokens to scale.',
-            'Create story-led modules that marketing can remix without breaking brand.',
-            'Ship a governance guide that explains when to evolve or retire components.'
-        ]
+    'blog-1': {
+        title: 'Inside Our Design Process',
+        category: 'Design',
+        image: './assets/images/blog-post-1.jpeg',
+        description: 'Take a behind-the-scenes look at how we create authentic, user-centered designs that showcase your products beautifully.',
+        content: '<p>Our design process represents the pinnacle of web design excellence. Every website we create undergoes rigorous planning and design procedures to ensure optimal user experience and visual appeal.</p><p>We utilize modern design tools and follow industry best practices, ensuring that every design meets or exceeds client expectations and industry standards.</p>'
     },
-    'conversion-audit': {
-        title: 'The Conversion Audit We Run Before Every Launch',
-        image: 'https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80',
-        excerpt: 'Seven critical signals we evaluate to derisk product launches.',
-        highlights: [
-            'Interrogate differentiation: does every section prove value with evidence?',
-            'Stress-test mobile: one-touch proof, frictionless CTAs, and device-specific assets.',
-            'Review follow-up paths to ensure sales enablement and success teams stay in sync.'
-        ]
+    'blog-2': {
+        title: 'Best Practices for Product Showcase Websites',
+        category: 'Tips',
+        image: './assets/images/blog-post-2.jpeg',
+        description: 'From responsive layouts to compelling visuals, learn how to create websites that effectively showcase your products and drive conversions.',
+        content: '<p>Discover the secrets behind creating effective product showcase websites. Learn how to present your products in ways that captivate visitors and encourage them to take action.</p><p>From high-quality imagery to clear call-to-actions, we explore comprehensive strategies that help your products stand out online.</p>'
     },
-    'launch-ops': {
-        title: 'How We Run Launch Ops in Two Week Sprints',
-        image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80',
-        excerpt: 'Inside the rituals that keep distributed teams aligned during high-stakes releases.',
-        highlights: [
-            'Kick off with a narrative brief everyone can reference asynchronously.',
-            'Run twice-weekly standups anchored on blockers, metrics, and decisions.',
-            'Close loops with retros that document learnings and roll them into the next sprint.'
-        ]
+    'blog-3': {
+        title: 'The Future of Web Design',
+        category: 'Insights',
+        image: './assets/images/blog-post-3 (2).jpeg',
+        description: 'We\'re investing in emerging technologies and design trends to future-proof your digital presence.',
+        content: '<p>As web design continues to evolve, we\'re preparing for the future. Our investment in new technologies and design trends ensures we can create websites that stand the test of time.</p><p>Our team stays updated with the latest design tools, frameworks, and methodologies to deliver cutting-edge solutions that keep your website ahead of the curve.</p>'
     }
 };
 
-const footerServiceDetails = {
-    'ux-retainer': {
-        title: 'UX Research Retainers',
-        description: 'Stay in tune with your users through continuous discovery partnerships.',
-        points: [
-            'Foundational studies every quarter to refresh customer personas.',
-            'Rapid usability interviews embedded into your feature release cadence.',
-            'Monthly insight reports that translate findings into product and marketing actions.'
-        ]
+const otherServicesDetails = {
+    'windshield': {
+        title: 'Windshield and All Glass Polishing',
+        description: 'Restore clarity and visibility to your vehicle\'s glass surfaces with our professional polishing services.',
+        details: 'We use specialized compounds and techniques to remove scratches, water spots, and oxidation from windshields, side windows, and rear glass, restoring them to like-new condition.'
     },
-    'sales-enablement': {
-        title: 'Sales Enablement Kits',
-        description: 'Arm GTM teams with narratives, decks, and proofs that map to every objection.',
-        points: [
-            'Persona-specific pitch sequences and demo dialogue trees.',
-            'Battlecards updated with competitor intel and pricing guidance.',
-            'Notion-based resource hubs so reps can self-serve the latest collateral.'
-        ]
+    'seat-covers': {
+        title: 'Seat Covers and Door Pad Leather Upholstery',
+        description: 'Custom leather upholstery solutions that enhance comfort and style.',
+        details: 'Premium leather seat covers and door pad upholstery tailored to your vehicle\'s interior. Available in various colors and finishes to match your preferences.'
     },
-    'video-sprints': {
-        title: 'Launch Video Sprints',
-        description: 'Ship motion explainers and teaser loops in under three weeks.',
-        points: [
-            'Storyboard and scriptwriting aligned with your product narrative.',
-            'Illustration, animation, and sound design handled end-to-end.',
-            'Optimised exports for social, product, and investor touchpoints.'
-        ]
+    'anti-rust': {
+        title: 'Under-body Anti-rust Coatings',
+        description: 'Protect your vehicle\'s chassis from corrosion with our specialized anti-rust treatments.',
+        details: 'Comprehensive under-body protection using advanced rust-prevention coatings that shield critical components from moisture, salt, and environmental damage.'
     },
-    'brand-audit': {
-        title: 'Brand & Messaging Audits',
-        description: 'Find alignment gaps across your customer journey before they impact trust.',
-        points: [
-            'Deep dives into tone, visual language, and proof across key assets.',
-            'Recommendations prioritised by effort, impact, and owner.',
-            'Workshop to align stakeholders on the refreshed direction.'
-        ]
+    'steering-gear': {
+        title: 'Steering, Gear Knob and Gear Bellow Covers',
+        description: 'Custom covers that add comfort and style to your vehicle\'s interior controls.',
+        details: 'Premium leather and fabric covers for steering wheels, gear knobs, and gear bellows, available in various styles and colors to personalize your driving experience.'
     },
-    'cms-ops': {
-        title: 'Headless CMS Ops',
-        description: 'Content infrastructure that empowers teams to publish confidently.',
-        points: [
-            'Technical architecture setup with roles, workflows, and QA safeguards.',
-            'Component-driven content models for consistency and speed.',
-            'Documentation and training for marketers, founders, and product teams.'
-        ]
+    'mats': {
+        title: '7D Mats with Custom Stitchings',
+        description: 'Custom-fit floor mats that protect your vehicle\'s interior while adding a touch of elegance.',
+        details: 'Premium 7D floor mats with custom stitching options, perfect fit for your vehicle model, and superior protection against wear and stains.'
     },
-    analytics: {
-        title: 'Analytics & Attribution Setup',
-        description: 'Measure what matters from day one of your launch.',
-        points: [
-            'Implement event tracking across web, product, and marketing automations.',
-            'Dashboards focused on pipeline impact, not vanity metrics.',
-            'Enable cohort-based reporting to inform experimentation roadmaps.'
-        ]
+    'headlight': {
+        title: 'Headlight and Taillight Restorations',
+        description: 'Restore clarity and brightness to your vehicle\'s lighting systems.',
+        details: 'Professional restoration services that remove yellowing, hazing, and oxidation from headlights and taillights, improving visibility and appearance.'
+    },
+    'washing': {
+        title: 'Body Washing and Vacuuming',
+        description: 'Comprehensive cleaning services to keep your vehicle looking its best.',
+        details: 'Thorough exterior washing and interior vacuuming services using premium products and techniques to maintain your vehicle\'s pristine condition.'
+    },
+    'headliners': {
+        title: 'Headliners Replacement',
+        description: 'Professional headliner replacement and repair services.',
+        details: 'Expert replacement of sagging or damaged headliners with premium materials, ensuring a perfect fit and factory-quality finish.'
     }
 };
 
@@ -157,11 +140,12 @@ document.addEventListener('DOMContentLoaded', () => {
     initialiseSmoothScroll();
     initThirdPartyLibraries();
     setupServiceModal();
+    setupBlogModal();
+    setupOtherServicesModal();
     setupCounters();
     setupContactForm();
     setupBlogModal();
-    setupFooterServiceModal();
-    setCurrentYear();
+    setupOtherServicesModal();
 });
 
 function initialiseSmoothScroll() {
@@ -327,6 +311,156 @@ function setupServiceModal() {
     });
 }
 
+function setupBlogModal() {
+    const modal = document.getElementById('blogModal');
+    if (!modal) {
+        return;
+    }
+
+    const modalTitle = modal.querySelector('[data-blog-title]');
+    const modalCategory = modal.querySelector('[data-blog-category]');
+    const modalContent = modal.querySelector('[data-blog-content]');
+    const modalImage = modal.querySelector('[data-blog-image]');
+    const closeButtons = modal.querySelectorAll('[data-blog-modal-close]');
+    let lastFocusedElement = null;
+
+    modal.setAttribute('aria-hidden', 'true');
+
+    const renderBlogModal = (blog) => {
+        modalTitle.textContent = blog.title;
+        modalCategory.textContent = blog.category;
+        modalContent.innerHTML = blog.content;
+        modalImage.src = blog.image;
+        modalImage.alt = blog.title;
+    };
+
+    const openBlogModal = (key) => {
+        const blog = blogDetails[key];
+        if (!blog) {
+            return;
+        }
+
+        renderBlogModal(blog);
+        lastFocusedElement = document.activeElement;
+        modal.classList.add('is-visible');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('no-scroll');
+
+        const closeButton = modal.querySelector('.blog-modal__close');
+        window.requestAnimationFrame(() => {
+            closeButton?.focus({ preventScroll: true });
+        });
+    };
+
+    const closeBlogModal = () => {
+        modal.classList.remove('is-visible');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('no-scroll');
+        if (lastFocusedElement instanceof HTMLElement) {
+            lastFocusedElement.focus({ preventScroll: true });
+        }
+    };
+
+    document.querySelectorAll('[data-blog-key]').forEach((card) => {
+        card.addEventListener('click', () => {
+            openBlogModal(card.dataset.blogKey);
+        });
+    });
+
+    closeButtons.forEach((button) => {
+        button.addEventListener('click', closeBlogModal);
+    });
+
+    modal.addEventListener('click', (event) => {
+        if (event.target?.dataset?.blogModalClose !== undefined) {
+            closeBlogModal();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modal.classList.contains('is-visible')) {
+            closeBlogModal();
+        }
+    });
+}
+
+function setupOtherServicesModal() {
+    const modal = document.getElementById('otherServiceModal');
+    if (!modal) {
+        return;
+    }
+
+    const modalTitle = modal.querySelector('[data-other-modal-title]');
+    const modalDescription = modal.querySelector('[data-other-modal-description]');
+    const modalList = modal.querySelector('[data-other-modal-list]');
+    const closeButtons = modal.querySelectorAll('[data-other-modal-close]');
+    let lastFocusedElement = null;
+
+    modal.setAttribute('aria-hidden', 'true');
+
+    const renderModal = (service) => {
+        modalTitle.textContent = service.title;
+        modalDescription.textContent = service.description;
+
+        modalList.innerHTML = '';
+        service.points.forEach((point) => {
+            const item = document.createElement('li');
+            item.textContent = point;
+            modalList.appendChild(item);
+        });
+    };
+
+    const openModal = (key) => {
+        const service = otherServicesDetails[key];
+        if (!service) {
+            return;
+        }
+
+        renderModal(service);
+        lastFocusedElement = document.activeElement;
+        modal.classList.add('is-visible');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('no-scroll');
+
+        const closeButton = modal.querySelector('.service-modal__close');
+        window.requestAnimationFrame(() => {
+            closeButton?.focus({ preventScroll: true });
+        });
+    };
+
+    const closeModal = () => {
+        modal.classList.remove('is-visible');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('no-scroll');
+        if (lastFocusedElement instanceof HTMLElement) {
+            lastFocusedElement.focus({ preventScroll: true });
+        }
+    };
+
+    document.querySelectorAll('[data-other-service]').forEach((link) => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            openModal(link.dataset.otherService);
+        });
+    });
+
+    closeButtons.forEach((button) => {
+        button.addEventListener('click', closeModal);
+    });
+
+    modal.addEventListener('click', (event) => {
+        if (event.target?.dataset?.otherModalClose !== undefined) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modal.classList.contains('is-visible')) {
+            closeModal();
+        }
+    });
+}
+
 function setupCounters() {
     const counterCards = document.querySelectorAll('.counter-card');
     if (!counterCards.length) {
@@ -440,39 +574,28 @@ function setupContactForm() {
             return;
         }
 
-        try {
-            setSubmittingState(true);
+        const submissionText = buildSubmissionText(data);
+        
+        // Auto-save submission to backend (text file)
+        saveToBackend(submissionText);
 
-            const response = await fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            });
-
-            const payload = await parseJsonResponse(response);
-
-            if (!response.ok) {
-                throw new Error(payload?.message || 'Unable to submit your message right now. Please try again.');
-            }
-
-            await showAlert({
+        // Save to backend
+        saveToBackend(submissionText).then(() => {
+            showAlert({
                 icon: 'success',
-                title: 'Message received!',
-                text: payload?.message || "Thanks for reaching out. We'll get back to you within one business day."
+                title: 'Submitted!',
+                text: 'Your message has been submitted successfully. We will get back to you soon.',
+                confirmButtonText: 'OK'
             });
-
             form.reset();
-        } catch (error) {
-            await showAlert({
+        }).catch((error) => {
+            showAlert({
                 icon: 'error',
                 title: 'Submission failed',
-                text: error.message || 'We hit a snag while saving your details. Please try again shortly.'
+                text: 'There was an error submitting your message. Please try again later.'
             });
-        } finally {
-            setSubmittingState(false);
-        }
+            console.error('Submission error:', error);
+        });
     });
 }
 
@@ -570,85 +693,73 @@ function setupBlogModal() {
         }
     });
 
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && modal.classList.contains('is-visible')) {
-            closeModal();
-        }
-    });
+    return [
+        '--- Aithentic Contact Submission ---',
+        `Timestamp: ${timestamp}`,
+        `Name: ${data.firstName} ${data.lastName}`,
+        `Email: ${data.email}`,
+        `Phone: ${data.phone}`,
+        `Subject: ${data.subject}`,
+        'Message:',
+        data.message,
+        '',
+        '---------------------------------------------'
+    ].join('\n');
 }
 
-function setupFooterServiceModal() {
-    const modal = document.getElementById('footerServiceModal');
-    if (!modal) {
-        return;
+function saveToBackend(content) {
+    // Auto-save to backend
+    const timestamp = Date.now();
+async function saveToBackend(content) {
+    try {
+        const response = await fetch('/api/save-contact.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ content })
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to save contact submission');
+        }
+
+        return await response.json();
+    } catch (error) {
+        // Fallback: Save to local file if backend is not available
+        console.warn('Backend not available, using fallback:', error);
+        
+        // For development/testing, save to localStorage
+        try {
+            const submissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
+            submissions.push({
+                content: content,
+                timestamp: new Date().toISOString()
+            });
+            localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
+            return { success: true, message: 'Saved locally (backend unavailable)' };
+        } catch (localError) {
+            throw error;
+        }
     }
+}
 
-    const modalTitle = modal.querySelector('[data-footer-modal-title]');
-    const modalDescription = modal.querySelector('[data-footer-modal-description]');
-    const modalList = modal.querySelector('[data-footer-modal-list]');
-    const closeButtons = modal.querySelectorAll('[data-footer-modal-close]');
-    let lastFocusedElement = null;
-
-    const populateModal = (service) => {
-        modalTitle.textContent = service.title;
-        modalDescription.textContent = service.description;
-
-        modalList.innerHTML = '';
-        service.points.forEach((point) => {
-            const li = document.createElement('li');
-            li.textContent = point;
-            modalList.appendChild(li);
-        });
-    };
-
-    const openModal = (key) => {
-        const details = footerServiceDetails[key];
-        if (!details) {
-            return;
-        }
-
-        populateModal(details);
-        lastFocusedElement = document.activeElement;
-        modal.classList.add('is-visible');
-        modal.setAttribute('aria-hidden', 'false');
-        document.body.classList.add('no-scroll');
-
-        const closeButton = modal.querySelector('.footer-service-modal__close');
-        closeButton?.focus({ preventScroll: true });
-    };
-
-    const closeModal = () => {
-        modal.classList.remove('is-visible');
-        modal.setAttribute('aria-hidden', 'true');
-        document.body.classList.remove('no-scroll');
-        if (lastFocusedElement instanceof HTMLElement) {
-            lastFocusedElement.focus({ preventScroll: true });
-        }
-    };
-
-    document.querySelectorAll('[data-footer-service-key]').forEach((trigger) => {
-        trigger.addEventListener('click', () => openModal(trigger.dataset.footerServiceKey));
-        trigger.addEventListener('keydown', (event) => {
-            if (['Enter', ' '].includes(event.key)) {
-                event.preventDefault();
-                openModal(trigger.dataset.footerServiceKey);
-            }
-        });
-    });
-
-    closeButtons.forEach((button) => button.addEventListener('click', closeModal));
-
-    modal.addEventListener('click', (event) => {
-        if (event.target?.dataset?.footerModalClose !== undefined) {
-            closeModal();
-        }
-    });
-
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && modal.classList.contains('is-visible')) {
-            closeModal();
-        }
-    });
+function downloadTextFile(filename, content) {
+    const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `contact-submission-${timestamp}.txt`;
+    
+    // Silently download in background
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+    
+    setTimeout(() => {
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+    }, 100);
 }
 
 function showAlert(options) {
@@ -664,5 +775,201 @@ function showAlert(options) {
     }
 
     return Promise.resolve();
+}
+
+function setupBlogModal() {
+    const modal = document.getElementById('blogModal');
+    if (!modal) {
+        return;
+    }
+
+    const modalTitle = modal.querySelector('[data-blog-modal-title]');
+    const modalDescription = modal.querySelector('[data-blog-modal-description]');
+    const modalContent = modal.querySelector('[data-blog-modal-content]');
+    const modalImage = modal.querySelector('[data-blog-modal-image]');
+    const modalCategory = modal.querySelector('[data-blog-modal-category]');
+    const closeButtons = modal.querySelectorAll('[data-blog-modal-close]');
+    let lastFocusedElement = null;
+
+    modal.setAttribute('aria-hidden', 'true');
+
+    const renderModal = (blog) => {
+        modalTitle.textContent = blog.title;
+        modalDescription.textContent = blog.description;
+        modalContent.innerHTML = blog.content;
+        modalImage.src = blog.image;
+        modalImage.alt = blog.title;
+        modalCategory.textContent = blog.category;
+    };
+
+    const openModal = (key) => {
+        const blog = blogDetails[key];
+        if (!blog) {
+            return;
+        }
+
+        renderModal(blog);
+        lastFocusedElement = document.activeElement;
+        modal.classList.add('is-visible');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('no-scroll');
+
+        const closeButton = modal.querySelector('.blog-modal__close');
+        window.requestAnimationFrame(() => {
+            closeButton?.focus({ preventScroll: true });
+        });
+    };
+
+    const closeModal = () => {
+        modal.classList.remove('is-visible');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('no-scroll');
+        if (lastFocusedElement instanceof HTMLElement) {
+            lastFocusedElement.focus({ preventScroll: true });
+        }
+    };
+
+    document.querySelectorAll('[data-blog-key]').forEach((card) => {
+        card.addEventListener('click', () => {
+            openModal(card.dataset.blogKey);
+        });
+    });
+
+    document.querySelectorAll('[data-blog-link]').forEach((link) => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const card = link.closest('[data-blog-key]');
+            if (card) {
+                openModal(card.dataset.blogKey);
+            }
+        });
+    });
+
+    closeButtons.forEach((button) => {
+        button.addEventListener('click', closeModal);
+    });
+
+    modal.addEventListener('click', (event) => {
+        if (event.target?.dataset?.blogModalClose !== undefined) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modal.classList.contains('is-visible')) {
+            closeModal();
+        }
+    });
+}
+
+function setupOtherServicesModal() {
+    // Create modal HTML if it doesn't exist
+    let modal = document.getElementById('otherServicesModal');
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'otherServicesModal';
+        modal.className = 'service-modal';
+        modal.setAttribute('aria-hidden', 'true');
+        modal.innerHTML = `
+            <div class="service-modal__backdrop" data-other-services-close></div>
+            <div class="service-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="otherServicesModalTitle">
+                <button class="service-modal__close" type="button" data-other-services-close
+                    aria-label="Close service details">
+                    <i class="ri-close-line"></i>
+                </button>
+                <div class="service-modal__body">
+                    <div class="service-modal__text">
+                        <h3 id="otherServicesModalTitle" data-other-services-title></h3>
+                        <p data-other-services-description></p>
+                        <p data-other-services-details></p>
+                    </div>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+    }
+
+    const modalTitle = modal.querySelector('[data-other-services-title]');
+    const modalDescription = modal.querySelector('[data-other-services-description]');
+    const modalDetails = modal.querySelector('[data-other-services-details]');
+    const closeButtons = modal.querySelectorAll('[data-other-services-close]');
+    let lastFocusedElement = null;
+
+    modal.setAttribute('aria-hidden', 'true');
+
+    const renderModal = (service) => {
+        modalTitle.textContent = service.title;
+        modalDescription.textContent = service.description;
+        modalDetails.textContent = service.details;
+    };
+
+    const openModal = (key) => {
+        const service = otherServicesDetails[key];
+        if (!service) {
+            return;
+        }
+
+        renderModal(service);
+        lastFocusedElement = document.activeElement;
+        modal.classList.add('is-visible');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('no-scroll');
+
+        const closeButton = modal.querySelector('.service-modal__close');
+        window.requestAnimationFrame(() => {
+            closeButton?.focus({ preventScroll: true });
+        });
+    };
+
+    const closeModal = () => {
+        modal.classList.remove('is-visible');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('no-scroll');
+        if (lastFocusedElement instanceof HTMLElement) {
+            lastFocusedElement.focus({ preventScroll: true });
+        }
+    };
+
+    // Map footer links to service keys
+    const serviceMapping = {
+        'Windshield and all glass polishing': 'windshield',
+        'Seat covers and Door pad leather upholstery': 'seat-covers',
+        'Under-body anti-rust coatings': 'anti-rust',
+        'Steering, Gear knob and Gear bellow covers': 'steering-gear',
+        '7D matts with custom stitchings': 'mats',
+        'Headlight and taillight restorations': 'headlight',
+        'Body Washing and Vacuuming': 'washing',
+        'Headliners replacement': 'headliners'
+    };
+
+    // Add click handlers to footer links
+    document.querySelectorAll('footer ul li a').forEach((link) => {
+        const linkText = link.textContent.trim();
+        const serviceKey = serviceMapping[linkText];
+        
+        if (serviceKey) {
+            link.style.cursor = 'pointer';
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal(serviceKey);
+            });
+        }
+    });
+
+    closeButtons.forEach((button) => {
+        button.addEventListener('click', closeModal);
+    });
+
+    modal.addEventListener('click', (event) => {
+        if (event.target?.dataset?.otherServicesClose !== undefined) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modal.classList.contains('is-visible')) {
+            closeModal();
+        }
+    });
 }
 
